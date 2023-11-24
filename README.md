@@ -307,6 +307,9 @@ spacing for a particular net. Typically, you want to route these nets and shield
 other nets
 ![Screenshot from 2023-11-24 10-14-19](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/66df1c34-aeee-4666-aa4e-5715727c1cfd)
 ![Screenshot from 2023-11-24 15-22-02](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/ff3261ed-a139-46fe-862d-8d87a5984db4)
+![Screenshot from 2023-11-24 15-22-32](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/0a4028ab-7660-44d1-919f-dbb699ea48e6)
+![Screenshot from 2023-11-24 15-22-23](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/0140dc0f-8db2-401f-a338-a25dd91fc26c)
+
 ---
 ## 2.7. Exploring Net and Via editor
 you load a design, set up wire snapping to pins and tracks, and route with nondefault 
