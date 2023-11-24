@@ -20,8 +20,9 @@
  - 2.3. Power Planning
  - 2.4. placement
  - 2.5. Clock tree synthesis
- - 2.6. Exploring nets and via altration
- - 2.7. Final Sign-off and generating GDS file
+ - 2.6. Detailed Routing
+ - 2.7. Exploring nets and via altration
+ - 2.8. Final Sign-off and generating GDS file
 
 ---
 
@@ -284,6 +285,7 @@ write_db –oa_lib_cell_view {FEOADesignlib DTMF_CHIP floorplan}
 3. Set Min: to Metal1(1) and Max: to Metal3(3).
 4. Click OK & refresh the design
 ![Screenshot from 2023-11-24 10-34-13](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/86a887cf-e4ba-4826-bcef-d2c053c85855)
+![Screenshot from 2023-11-24 10-10-27](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/ef93b98b-0edc-495d-b28b-c8828c3750c9)
 
 ![Screenshot from 2023-11-24 10-44-00](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/c1e05e6a-006a-47d5-88c7-70d955ed5faa)
 ### Congestion
@@ -296,6 +298,35 @@ After running placement or pre-CTS optimization, you run clock tree synthesis, w
 clock specification file. This file specifies target skews, insertion delay, and transition times for the 
 clocks in your design.
 ![cts](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/631e6d51-a702-4bdb-bfa1-ebac0f749773)
+Run post cts timing analysis if any setup or hold violation occurs rectify it using innovus command
+---
+## 2.6. Detailed Routing
+Certain critical or high-speed nets require shielding or spacing from other nets. In this lab, you 
+specify attributes to shield those nets and to assign the nets used for shielding. You also set up extra 
+spacing for a particular net. Typically, you want to route these nets and shields before routing any 
+other nets
+![Screenshot from 2023-11-24 10-14-19](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/66df1c34-aeee-4666-aa4e-5715727c1cfd)
+![Screenshot from 2023-11-24 15-22-02](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/ff3261ed-a139-46fe-862d-8d87a5984db4)
+---
+## 2.7. Exploring Net and Via editor
+you load a design, set up wire snapping to pins and tracks, and route with nondefault 
+wires. You also route shielded nets and change the width of a signal wire.
+![Screenshot from 2023-11-24 14-08-26](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/5d1e810f-1ea1-4785-afdf-9b8cd7b99089)
+![Screenshot from 2023-11-24 14-19-03](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/b2e1b02a-8de3-413a-9076-680dded1c076)
+![Screenshot from 2023-11-24 15-30-09](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/a0ce6eb6-67db-4ce2-bfe8-21cd54e8306a)
+---
+## 2.8. Final Sign-off and Generating GDS file
+
+After all optimization and analysis check DRC, Timing and Signal Integrity if present clear it and in >file>save>GDS and give a name
+the GDS file can sent to the foundry to Fabricate
+---
+
+
+
+
+
+
+
 
 
 
