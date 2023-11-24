@@ -139,7 +139,7 @@ total run time and memory usage to this point?
 ~288.99 secs, ~1510.26 MB
 
 # 2. Physical Design
- ## 2.2. Imporing The Design
+ ## 2. Imporing The Design
 Starting the Software 
 1. Change to the working directory by entering: 
    cd VDI/FPR/work 
@@ -192,7 +192,7 @@ Note: Do not perform this operation more than once.
 ![Screenshot from 2023-11-23 12-04-41](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/47d477f3-2345-4d7a-a114-e7881077c8a8)
 
 --- 
-## Floorplanning
+## 2.2.Floorplanning
 1. Clear the floorplan by selecting Clear Floorplan from the Floorplan menu and 
 choosing All Floorplan Objects.
 2. In the All Colors pane, make sure that Pin Shapes visibility is selected.
@@ -216,7 +216,7 @@ delete_relative_floorplan DTMF_INST/ARB_INST/ROM_512x16_0_INST
  Save the floorplan with a name dtmf_fp.fp
 ![Screenshot from 2023-11-23 15-01-40](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/cb632c86-de6a-488c-98c6-e29a3ef5b062)
 
-## Power Planning
+## 2.3.Power Planning
 1.Start the Innovus platform by entering this string: 
 innovus -vdi -stylus
 2. Source the file dtmf.setup, which contains commands to read in libraries and the DEF 
@@ -274,7 +274,7 @@ relevant vias.
 write_db –oa_lib_cell_view {FEOADesignlib DTMF_CHIP floorplan}
 2. Close the session.
 --- 
-## Placement
+## 2.4.Placement
 ### Placement Optimization
  1.Load the design and floorplan
  2.Read the def file
@@ -286,6 +286,17 @@ write_db –oa_lib_cell_view {FEOADesignlib DTMF_CHIP floorplan}
 ![Screenshot from 2023-11-24 10-34-13](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/86a887cf-e4ba-4826-bcef-d2c053c85855)
 
 ![Screenshot from 2023-11-24 10-44-00](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/c1e05e6a-006a-47d5-88c7-70d955ed5faa)
+### Congestion
+![Screenshot from 2023-11-24 10-59-41](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/45b26f59-1d46-41f2-838b-b193dd98bf6c)
+### RC Extraction & Timing analysis
+   Check log and cmd file
+---
+## 2.5. Clock Tree Synthesis
+After running placement or pre-CTS optimization, you run clock tree synthesis, which requires a 
+clock specification file. This file specifies target skews, insertion delay, and transition times for the 
+clocks in your design.
+![cts](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/631e6d51-a702-4bdb-bfa1-ebac0f749773)
+
 
 
 
