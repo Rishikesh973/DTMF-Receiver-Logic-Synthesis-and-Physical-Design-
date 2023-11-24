@@ -2,11 +2,11 @@
 
  Design of DTMF receiver from logic synthesis from rtl and perform Physical Design including floorplaning, partition, placement, CTS, Routing, STA and finally sign-off the design
  ---
- DTMF technology works by having the handset generate tones at specific frequencies and playing them over the phone line when a button is pressed on the keypad. Equipment at the other end of the phone line listens to the specific sounds and decodes them into commands.
+ - DTMF technology works by having the handset generate tones at specific frequencies and playing them over the phone line when a button is pressed on the keypad. Equipment at the other end of the phone line listens to the specific sounds and decodes them into commands.
 
-These commands are typically used to dial a phone number to call but can also be used to signal phone control commands or control remote equipment, since the control tones are played on the same channel as the voice signal. It is an in-band signaling system; this is different than out-of-band systems.
+- These commands are typically used to dial a phone number to call but can also be used to signal phone control commands or control remote equipment, since the control tones are played on the same channel as the voice signal. It is an in-band signaling system; this is different than out-of-band systems.
 
-DTMF specifies eight different tones. They are divided into a high group and a low group. Each key press corresponds to two tones -- hence the name dual tone -- one from the high group and one from the low group. This allows for 16 total keys.
+- DTMF specifies eight different tones. They are divided into a high group and a low group. Each key press corresponds to two tones -- hence the name dual tone -- one from the high group and one from the low group. This allows for 16 total keys.
 
 ---
 ## Contents
@@ -29,8 +29,8 @@ DTMF specifies eight different tones. They are divided into a high group and a l
 Starting Genus
 1. Change to the work directory by entering this command: cd genus labs/work
 2. Start the software by entering this command:
-genus -lic startup Virtuoso Digital Implem
-You can type commands interactively at The command shell that starts Genus" is dedicated to the Genus shell. You must view files in a separate terminal window and not in the Genus shell.
+- genus -lic startup Virtuoso Digital Implem
+- You can type commands interactively at The command shell that starts Genus" is dedicated to the Genus shell. You must view files in a separate terminal window and not in the Genus shell.
 the genus: shell prompt.
 
 Loading Libraries and Designs
@@ -38,12 +38,12 @@ Loading Libraries and Designs
 
       source../tel/setup run.tel
 setup_run.tcl contains all the variables needed for the design. The following list shows a few of the important variables from the setup.ted file:
-The DESIGN variable is set to dtmf_recvr_core.
-Variables are set for search paths for technology libraries, LEF libraries, scripts, RTL., etc.
-The RTL LIST variable is set to the list of RTL/HDL files.
-The LIB LIST variable is set to the list of technology library files.
-The LEF LIST variable is set to the list of LEF library files.
-Attributes to set search path for libraries, design and script are listed below:
+- The DESIGN variable is set to dtmf_recvr_core.
+- Variables are set for search paths for technology libraries, LEF libraries, scripts, RTL., etc.
+- The RTL LIST variable is set to the list of RTL/HDL files.
+- The LIB LIST variable is set to the list of technology library files.
+- The LEF LIST variable is set to the list of LEF library files.
+- Attributes to set search path for libraries, design and script are listed below:
    set db init lib_search_path 311B PATI
    set_db script_search_path #TCL PATH
 
