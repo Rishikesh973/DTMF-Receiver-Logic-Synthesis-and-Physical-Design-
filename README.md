@@ -59,7 +59,7 @@ Tip: When writing Tel, multiple directories must be separated by a space and enc
 Tip: You can get help on all the library attributes by entering:
 help attribute library
 Tip: You can use the help command to get help on any attribute.
-List the libraries that are louded into Genuх.
+List the libraries that are louded into Genus.
 
 Use the get db command. Example: get_db library For this lab, you can ignore the warnings printed by the tool.
 
@@ -70,7 +70,7 @@ Use the get db command. Example: get_db library For this lab, you can ignore the
 You can ignore the warning messages.
 
 Elaborating the Design
-1. Elaborate the design.
+2. Elaborate the design.
     elaborate DESIGN
 When you elaborate the design, it displays some warning messages. In a real design.
 scenario, you typically look at these messages in detail.
@@ -81,8 +81,8 @@ Also, the elaboration must finish with the "Done elaborating...." message.
    read sdc../constraints/constraints.ado
 The SDC file has some errors. The log file reports the errors and the reasons.
 Are there any errors and failed commands?
-Answer:
-Fixing Failed SDC Constraints
+
+### Fixing Failed SDC Constraints
 1. Analyze the messages in the console and in the logfile.
 a. Fix the syntax errors and the failed commands.
 b. Save the fixed commands into the constraints.sdc file.
