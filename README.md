@@ -7,6 +7,9 @@
 - These commands are typically used to dial a phone number to call but can also be used to signal phone control commands or control remote equipment, since the control tones are played on the same channel as the voice signal. It is an in-band signaling system; this is different than out-of-band systems.
 
 - DTMF specifies eight different tones. They are divided into a high group and a low group. Each key press corresponds to two tones -- hence the name dual tone -- one from the high group and one from the low group. This allows for 16 total keys.
+  
+![Screenshot from 2023-11-23 12-02-31](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/24625d55-60b1-47d3-856c-0a6a6b8519b5)
+![Screenshot from 2023-11-23 11-34-52](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/ab627a1d-8006-4aa7-84bc-b69d6a9b5ac2)
 
 ---
 ## Contents
@@ -211,8 +214,40 @@ delete_relative_floorplan DTMF_INST/ARB_INST/ROM_512x16_0_INST
 
  ![Screenshot from 2023-11-23 11-26-35](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/a432161b-e82c-4e42-bf47-a5874bc5ed0f)
  Save the floorplan with a name dtmf_fp.fp
- f
+![Screenshot from 2023-11-23 15-01-40](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/cb632c86-de6a-488c-98c6-e29a3ef5b062)
 
+## Power Planning
+1.Start the Innovus platform by entering this string: 
+innovus -vdi -stylus
+2. Source the file dtmf.setup, which contains commands to read in libraries and the DEF 
+file for IO placement.
+a. Fit the design to the window by pressing f.
+3. Load a floorplan by choosing File ‒ Load ‒ Floorplan.
+4. Enter dtmf_blocks.fp for the File Name. 
+5. Choose Power ‒ Power Planning ‒ Add Ring.
+The Add Rings form is displayed
+6. To select the VDD and VSS nets, click the folder icon in the Net(s) field. 
+The Net Selection form is displayed. 
+7. In the Possible Nets pane, press Shift and VDD and VSS. 
+8. Click Add. 
+The selected nets appear in the Chosen Nets pane.
+9. Click OK.
+10. Make sure that the Net(s) field contains VDD and VSS.
+11. Click Core ring(s) contouring.
+12. Select Around core boundary.
+13. In the Ring Configuration field, make sure that the METAL5(5) H layer is selected for
+Top and Bottom. 
+14. Make sure that a width of 8 and a spacing of 1 are set. 
+15. Use METAL6(6) V as the layer for left and right. Select a width of 8 and a spacing of 1. 
+16. Under Offset, in all the fields, enter 1.
+17. To generate the power rings, click Apply. 
+Next, you create the rings for the PLL block. It is the only block that does not have a self-
+contained ring.
+18. In the design window, select the PLL block.
+19. In the same form, in the Ring Type section, select Block ring(s) around.
+20. Select Each selected block and/or group of core rows.
+
+ 
 
 
 
