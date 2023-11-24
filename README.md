@@ -135,8 +135,8 @@ Changes to the netlist and constraints are not written out unless explicitly spe
 total run time and memory usage to this point? 
 ~288.99 secs, ~1510.26 MB
 
-# -1.Physical Design
- ## Imporing The Design
+# 2. Physical Design
+ ## 2.2. Imporing The Design
 Starting the Software 
 1. Change to the working directory by entering: 
    cd VDI/FPR/work 
@@ -155,6 +155,64 @@ The Design Import form appears.
 read_def DTMF_CHIP_io.def
 4. Press f on the keyboard to fit the design to the screen.
 The following table provides a brief description of the fields in the Design Import window
+
+### Viewing the Design 
+In this section, you learn more about the objects on the screen and how to view and interpret what 
+you see in the design window. 
+1. To enlarge the window, drag the corner of the window until you can see all the 
+modules in your design, as well as all the Innovus menus. 
+2. Select the Floorplan view. 
+3. Fit the design to the window by pressing the f key.
+4. Under the All Colors pane, make sure that Pin Shapes visibility under Cell is
+![WhatsApp Image 2023-11-25 at 00 24 46_d7a7749a](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/efe7228b-2b64-4e40-b02e-54b13e2ba092)
+5. Zoom out by pressing Shift-Z or by clicking the Zoom Out icon.
+The view changes. 
+6. Expand the design window horizontally to display all the available pull-down menus.
+7. Choose Tools ‒ Cell Viewer to view the LEF technology definitions and the abstracts 
+of the standard cells. 
+8. To view more of the objects, click the Zoom Out icon or press Shift-Z
+9. Move your cursor over the icons and notice that their functions are displayed in text 
+boxes, as shown here.
+10. Select All Colors, which brings up the Color Preferences Menu.
+You can turn on and off the visibility and selectability of objects by clicking under V (for 
+visibility) or under S (for selectability).
+11. For example, unselect Terminal Visibility.
+12. Notice that the I/O terminals in the design window are no longer visible.
+13. On the left of the core area, select the pink module DTMF_INST.
+14. After selecting the DTMF_INST module, click the Ungroup icon once.
+This will ungroup the module.
+Note: Do not perform this operation more than once.
+On the left of the core area, select the pink module DTMF_INST.
+14. After selecting the DTMF_INST module, click the Ungroup icon once.
+This will ungroup the module.
+Note: Do not perform this operation more than once.
+![Screenshot from 2023-11-23 12-04-41](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/47d477f3-2345-4d7a-a114-e7881077c8a8)
+
+--- 
+## Floorplanning
+1. Clear the floorplan by selecting Clear Floorplan from the Floorplan menu and 
+choosing All Floorplan Objects.
+2. In the All Colors pane, make sure that Pin Shapes visibility is selected.
+3. Place an object relative to the core boundary by entering the following command:
+create_relative_floorplan –place DTMF_INST/ARB_INST/ROM_512x16_0_INST \
+-ref_type core_boundary \
+-horizontal_edge_separate {1 -40 1} \
+-vertical_edge_separate {0 -10 0} 
+4. To place the DTMF_INST/PLLCLK_INST block relative to the previously placed 
+block enter the following command:
+create_relative_floorplan -place DTMF_INST/PLLCLK_INST \
+-ref_type object \
+-ref DTMF_INST/ARB_INST/ROM_512x16_0_INST \
+-horizontal_edge_separate {1 10 1} \
+-vertical_edge_separate {2 40 0}
+5. Delete the floorplanning constraints between the core boundary and the ROM by 
+entering:
+delete_relative_floorplan DTMF_INST/ARB_INST/ROM_512x16_0_INST
+
+ ![Screenshot from 2023-11-23 11-26-35](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/a432161b-e82c-4e42-bf47-a5874bc5ed0f)
+ Save the floorplan with a name dtmf_fp.fp
+
+
 
 
 
