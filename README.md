@@ -211,6 +211,7 @@ delete_relative_floorplan DTMF_INST/ARB_INST/ROM_512x16_0_INST
 
  ![Screenshot from 2023-11-23 11-26-35](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/a432161b-e82c-4e42-bf47-a5874bc5ed0f)
  Save the floorplan with a name dtmf_fp.fp
+ f
 
 
 
