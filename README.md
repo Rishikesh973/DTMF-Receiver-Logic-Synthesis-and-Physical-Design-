@@ -12,13 +12,13 @@ DTMF specifies eight different tones. They are divided into a high group and a l
 ## Contents
 1. Logic Synthesis & Logic Optimization
 2. Physical Design
-2.1. Importing the Design
-2.2. Floorplanning
-2.3. Power Planning
-2.4. placement
-2.5. Clock tree synthesis
-2.6. Exploring nets and via altration
-2.7. Final Sign-off and generating GDS file
+ 2.1. Importing the Design
+ 2.2. Floorplanning
+ 2.3. Power Planning
+ 2.4. placement
+ 2.5. Clock tree synthesis
+ 2.6. Exploring nets and via altration
+ 2.7. Final Sign-off and generating GDS file
 
 ---
 
