@@ -22,7 +22,7 @@ DTMF specifies eight different tones. They are divided into a high group and a l
 
 ---
 
-### 1. Logic Synthesis
+# 1. Logic Synthesis
  work/
 
 //This where you run your labs
@@ -63,7 +63,7 @@ List the libraries that are louded into Genuх.
 
 Use the get db command. Example: get_db library For this lab, you can ignore the warnings printed by the tool.
 
-# Reading the Design
+### Reading the Design
 
 1. Read the RTL files using the following command:
    read hdl 3RTL LIST
@@ -76,7 +76,7 @@ When you elaborate the design, it displays some warning messages. In a real desi
 scenario, you typically look at these messages in detail.
 Also, the elaboration must finish with the "Done elaborating...." message.
 
-# Reading SDC Constraints
+### Reading SDC Constraints
 1. Read the constraint file.
    read sdc../constraints/constraints.ado
 The SDC file has some errors. The log file reports the errors and the reasons.
@@ -90,9 +90,6 @@ Note: To reset the timing of the design, use the reset design command.
 c. To read the constraints again, reset the timing of the design and read the updated SDC file.
 reset design
    read sdc../constraints/constraints.sde (updated filel
-Are there any errors?
-Answer:
-If the answer is yes, repeat this step.
 2. Optional: If you did not complete the previous step, read the constraints using the following commands:
 reset_design
 read sde../constraints/dtmf_recvr_core.adc
@@ -104,7 +101,7 @@ Tip: TDSP_DS_CS_INST gets a defined clock m clk, but it is gated with a data sig
 Tip: Missing external delays. Some of these ports have no real connections in. the RTL., so they can be ignored until placement or routing.
 In this lab, you do not have to fix these missing constraints. Let's assume that you
 delegated this issue to logic design/verification group.
-Synthesizing the Design
+### Synthesizing the Design
 1. Set the Generic Synthesis effort using an attribute. By default, Generic Synthesis is run using medium effort. Should you want to change this, use this attribute:
     set db ayn generic effort low/medium/high express
 2. Synthesizes the design to generic gates. It takes a list of top-level designs and the RTI. blocks to generic gates using the given constraints and performs
@@ -133,4 +130,31 @@ The netlist
 The constraints
      write sdo > DESIGN) syn, sdc
 Changes to the netlist and constraints are not written out unless explicitly specified.
+ total area of the design?
+ ~0. 235553868 mm2
+total run time and memory usage to this point? 
+~288.99 secs, ~1510.26 MB
+
+# -1.Physical Design
+ ## Imporing The Design
+Starting the Software 
+1. Change to the working directory by entering: 
+   cd VDI/FPR/work 
+2. Start the Virtuoso® Digital Implementation (VDI) system by entering: 
+    innovus -vdi -stylus
+Note: Do not use the window where you started the software for any windowing or 
+UNIX operations, except to communicate with the tool. 
+Importing a Design
+1. To import a gate-level netlist, timing constraints, and libraries, choose File – Import
+Design.
+The Design Import form appears.
+2. Fill in the form as shown and click OK.
+ 
+![WhatsApp Image 2023-11-25 at 00 14 49_cd069aa2](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/96b44279-e0fb-489e-ae02-53e85730eec3)
+3. Place the I/Os by reading in a DEF file with I/O placements:
+read_def DTMF_CHIP_io.def
+4. Press f on the keyboard to fit the design to the screen.
+The following table provides a brief description of the fields in the Design Import window
+
+
 
