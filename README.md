@@ -246,8 +246,10 @@ contained ring.
 18. In the design window, select the PLL block.
 19. In the same form, in the Ring Type section, select Block ring(s) around.
 20. Select Each selected block and/or group of core rows.
+![Screenshot from 2023-11-23 15-48-25](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/3f47baea-005f-4e70-8aed-edd06e2e97df)
 
- ![Screenshot from 2023-11-23 15-45-57](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/8a130138-5773-4d73-b840-ae3834eed607)
+ ![Screenshot from 2023-11-23 15-45-57](https://![Screenshot from 2023-11-23 15-48-30](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/bcae5a3d-f65b-452d-a6b7-7cfd7848fd94)
+github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/8a130138-5773-4d73-b840-ae3834eed607)
 
  ### Creating Foolowpin Routing with Special Route
  1. Before creating followpin routing (also known as power rails), associate the global 
