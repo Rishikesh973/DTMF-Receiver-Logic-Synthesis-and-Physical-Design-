@@ -247,7 +247,45 @@ contained ring.
 19. In the same form, in the Ring Type section, select Block ring(s) around.
 20. Select Each selected block and/or group of core rows.
 
- 
+ ![Screenshot from 2023-11-23 15-45-57](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/8a130138-5773-4d73-b840-ae3834eed607)
+
+ ### Creating Foolowpin Routing with Special Route
+ 1. Before creating followpin routing (also known as power rails), associate the global 
+VDD and VSS nets names to the standard cell pin names by entering the following 
+commands:
+connect_global_net VDD –type pg_pin –pin VDD –inst_base_name *
+connect_global_net VSS –type pg_pin –pin VSS –inst_base_name *
+2. Choose Route ‒ Special Route.
+The SRoute form appears.
+3. To populate the field with VDD and VSS, click the icon next to the Net(s) field.
+4. Click Add to add the nets to the Chosen Nets field and click OK.
+5. Deselect all options except Follow Pins.
+6. For Layer Change Control, select Metal 6 for Top Layer and Metal 1 for Bottom 
+Layer.
+7. Make sure that Allow Jogging and Allow Layer Change are selected.
+8. Click OK.
+9. In the Physical view, zoom in to the followpin routes.
+10. Notice that the power routes have been connected to the power planned targets with 
+relevant vias.
+### Saving the Session
+1. Save the design by entering the following command:
+write_db –oa_lib_cell_view {FEOADesignlib DTMF_CHIP floorplan}
+2. Close the session.
+--- 
+## Placement
+### Placement Optimization
+ 1.Load the design and floorplan
+ 2.Read the def file
+### Early Global Route
+1. Select Route ‒ Early Global Route to bring up the form.
+2. Select Routing Layer.
+3. Set Min: to Metal1(1) and Max: to Metal3(3).
+4. Click OK & refresh the design
+![Screenshot from 2023-11-24 10-34-13](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/86a887cf-e4ba-4826-bcef-d2c053c85855)
+
+![Screenshot from 2023-11-24 10-44-00](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/c1e05e6a-006a-47d5-88c7-70d955ed5faa)
+
+
 
 
 
