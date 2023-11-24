@@ -1,0 +1,11 @@
+#cds.lib file for AoT Training - 1st day Encounter Lab's
+# to be placed at FPR/work/
+# Change the path below to point to the path in your installation
+# INCLUDE /cds/lnx86/IC615_latest/share/cdssetup/cds.lib
+# Change the path below for techLib and cellLib to path to the absolute path in your environment
+DEFINE techLib ../oa/techLib
+DEFINE cellLib ../oa/cellLib
+# DEFINE FEOADesignlib FEOADesignlib
+# DEFINE FEOADesignlibStylus FEOADesignlibStylus
+DEFINE FEOADesignlib FEOADesignlib
+DEFINE FEOADesign FEOADesign

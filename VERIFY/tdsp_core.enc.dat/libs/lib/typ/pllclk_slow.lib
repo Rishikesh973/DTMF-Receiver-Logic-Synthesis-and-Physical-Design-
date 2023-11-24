@@ -1,0 +1,196 @@
+library (pllclk){
+  delay_model : table_lookup;
+  date : "today" ;
+  revision : "4.3" ;
+  bus_naming_style : "%s[%d]" ;
+  capacitive_load_unit ( 1.0000,pf );
+  comment : "Cadence TLF Version 4.3" ;
+  current_unit : "1uA" ;
+  pulling_resistance_unit : "1kohm" ;
+  time_unit : "1ns" ;
+  voltage_unit : "1V" ;
+  
+  leakage_power_unit : "1nW" ;
+  nom_process : 1.0000;
+  nom_temperature : 125.0000;
+  nom_voltage : 1.6200;
+ 
+  k_process_fall_transition : 1.0000;
+  k_process_hold_fall : 1.0000;
+  k_process_hold_rise : 1.0000;
+  k_process_pin_cap : 0.0000;
+  k_process_rise_transition : 1.0000;
+  k_process_setup_fall : 1.0000;
+  k_process_setup_rise : 1.0000;
+  k_process_wire_cap : 0.0000;
+  k_process_wire_res : 0.0000;
+  k_temp_fall_transition : 0.0000;
+  k_temp_hold_fall : 0.0011;
+  k_temp_hold_rise : 0.0011;
+  k_temp_rise_transition : 0.0000;
+  k_temp_setup_fall : 0.0011;
+  k_temp_setup_rise : 0.0011;
+  k_volt_fall_transition : 0.0000;
+  k_volt_hold_fall : -0.7783;
+  k_volt_hold_rise : -0.7783;
+  k_volt_rise_transition : 0.0000;
+  k_volt_setup_fall : -0.7783;
+  k_volt_setup_rise : -0.7783;
+  k_process_recovery_fall : 1.0000;
+  k_process_recovery_rise : 1.0000;
+  k_volt_recovery_fall : -0.7783;
+  k_volt_recovery_rise : -0.7783;
+  k_temp_recovery_fall : 0.0011;
+  k_temp_recovery_rise : 0.0011;
+  k_process_min_pulse_width_high : 1.0000;
+  k_process_min_pulse_width_low : 1.0000;
+  k_volt_min_pulse_width_high : -0.7783;
+  k_volt_min_pulse_width_low : -0.7783;
+  k_temp_min_pulse_width_high : 0.0011;
+  k_temp_min_pulse_width_low : 0.0011;
+  k_process_cell_rise : 1.0000;
+  k_process_cell_fall : 1.0000;
+  k_temp_cell_rise : 0.0011;
+  k_temp_cell_fall : 0.0011;
+  k_volt_cell_rise : -0.7783;
+  k_volt_cell_fall : -0.7783;
+  
+  k_process_cell_leakage_power : 0.0000;
+  default_cell_leakage_power : 0.0000;
+  k_volt_min_period : -0.7783;
+  k_temp_min_period : 0.0011;
+  k_process_internal_power : 0.0000;
+  
+  input_threshold_pct_fall : 50.0000;
+  input_threshold_pct_rise : 50.0000;
+  output_threshold_pct_fall : 50.0000;
+  output_threshold_pct_rise : 50.0000;
+  
+  slew_lower_threshold_pct_fall : 10.0000;
+  slew_lower_threshold_pct_rise : 10.0000;
+  slew_upper_threshold_pct_fall : 90.0000;
+  slew_upper_threshold_pct_rise : 90.0000;
+  
+  slew_derate_from_library : 1.0000;
+  
+  operating_conditions (slow){
+    process :  1.0000;
+    temperature :  125.0000;
+    voltage :  1.6200;
+    tree_type :  "balanced_tree" ;
+  }
+  
+  default_operating_conditions : "slow" ;
+
+  
+  lu_table_template (lu_template_timing_1){
+    variable_1 : total_output_net_capacitance ;
+    index_1("  0.0056, 0.3360, 0.6160, 1.3440, 2.3520, 3.6960, 4.9840");
+    variable_2 : input_net_transition ;
+    index_2("  0.0500, 0.1500, 0.6000, 1.4000, 2.3000, 3.3000, 4.5000");
+    
+  }
+  cell (pllclk) { 
+    area :  75000.0000;
+    cell_leakage_power :  0.1458;
+    dont_touch : true ;
+    dont_use : true ;
+    pin (refclk) { 
+      direction : input ;
+      capacitance :  0.0221;
+      
+    }
+    pin (ibias) { 
+      direction : input ;
+      capacitance :  0.0221;
+      
+    }
+    pin (reset) { 
+      direction : input ;
+      capacitance :  0.0221;
+      
+    }
+    pin (clk1x) { 
+      direction : output ;
+      capacitance :  0.0000;
+      max_capacitance :  4.9840;
+      function :  "refclk" ;
+      timing() { 
+       related_pin :" refclk ";
+       timing_type : combinational_rise ;
+        timing_sense : positive_unate ;
+        rise_transition (lu_template_timing_1){
+          values( \
+          " 0.0519, 0.0525, 0.0721, 0.0917, 0.1110, 0.1294, 0.1509",\
+          " 0.2148, 0.2149, 0.2284, 0.2489, 0.2705, 0.2923, 0.3169",\
+          " 0.3595, 0.3592, 0.3673, 0.3825, 0.4000, 0.4194, 0.4427",\
+          " 0.7439, 0.7438, 0.7462, 0.7531, 0.7628, 0.7757, 0.7937",\
+          " 1.2800, 1.2800, 1.2810, 1.2830, 1.2880, 1.2960, 1.3080",\
+          " 1.9960, 1.9960, 1.9960, 1.9970, 1.9990, 2.0040, 2.0120",\
+          " 2.6820, 2.6820, 2.6820, 2.6830, 2.6840, 2.6870, 2.6940"\
+          );
+          }
+        cell_rise (lu_template_timing_1){
+          values( \
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000"\
+          );
+          }
+      }
+      
+    }
+    pin (clk2x) { 
+      direction : output ;
+      capacitance :  0.0000;
+      max_capacitance :  4.9840;
+      function :  "refclk" ;
+      timing() { 
+         related_pin :" refclk ";
+       timing_type : combinational_fall ;
+        timing_sense : positive_unate ;
+        fall_transition (lu_template_timing_1){
+          values( \
+          " 0.0466, 0.0449, 0.0625, 0.0843, 0.1005, 0.1176, 0.1370",\
+          " 0.1875, 0.1881, 0.1991, 0.2174, 0.2357, 0.2546, 0.2772",\
+          " 0.3093, 0.3096, 0.3167, 0.3307, 0.3454, 0.3623, 0.3831",\
+          " 0.6336, 0.6336, 0.6365, 0.6448, 0.6535, 0.6649, 0.6808",\
+          " 1.0880, 1.0880, 1.0880, 1.0930, 1.0980, 1.1060, 1.1170",\
+          " 1.6950, 1.6950, 1.6950, 1.6970, 1.7010, 1.7060, 1.7140",\
+          " 2.2770, 2.2770, 2.2770, 2.2790, 2.2810, 2.2840, 2.2910"\
+          );
+          }
+        cell_fall (lu_template_timing_1){
+          values( \
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000",\
+          " 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000"\
+          );
+          }
+      }
+      
+    }
+    pin (vcop) { 
+      direction : output ;
+      capacitance :  0.0000;
+      max_capacitance :  4.9840;
+      
+    }
+    pin (vcom) { 
+      direction : output ;
+      capacitance :  0.0000;
+      max_capacitance :  4.9840;
+      
+    }
+    
+  }
+  
+}

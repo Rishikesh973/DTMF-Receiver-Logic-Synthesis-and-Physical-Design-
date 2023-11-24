@@ -1,0 +1,552 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Nov 24 14:32:30 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP postCTSopt}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP postCTSopt}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP postCTSopt}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP postCTSopt}
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_draw_view place
+get_multi_cpu_usage -local_cpu
+set_db check_implant 1
+set_db check_drc_implant_across_rows 0
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 0
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 828.66 500.85 829.92 502.11
+delete_drc_markers
+puts {}
+gui_fit
+set_db check_implant 1
+set_db check_drc_implant_across_rows 0
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 0
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 760.77 503.105 762.0 504.335
+gui_select -point {761.397 503.766}
+gui_redraw
+zoom_box 760.77 503.105 762.0 504.335
+zoom_box 760.77 503.105 762.0 504.335
+zoom_box 759.825 489.14 761.555 490.335
+gui_fit
+gui_redraw
+delete_drc_markers
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+gui_show_markers -all -no_false_marker
+check_connectivity -type all -check_geometry_loops -error 1000 -warning 50
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+check_connectivity -type all -check_geometry_loops -ignore_soft_pg_connects -error 1000 -warning 50
+check_connectivity -type all -check_geometry_loops -ignore_soft_pg_connects -error 1000 -warning 50
+zoom_box 1008.78 760.68 1010.16 761.96
+zoom_box 1008.78 760.68 1010.16 761.96
+gui_select -point {1009.454 761.379}
+gui_select -point {1009.036 761.264}
+gui_select -point {1009.525 761.272}
+gui_set_draw_view fplan
+gui_set_draw_view place
+gui_select -point {1011.315 761.913}
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+gui_fit
+gui_select -point {758.021 655.443}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 757.37 654.28 758.65 656.12
+zoom_box 757.37 654.28 758.65 656.12
+gui_select -point {758.051 655.466}
+gui_select -point {757.976 655.573}
+gui_fit
+gui_redraw
+gui_select -point {1458.455 941.772}
+gui_select -point {693.000 689.850}
+gui_select -point {696.229 693.080}
+gui_set_draw_view fplan
+gui_set_draw_view place
+gui_select -point {-324.379 1041.895}
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 872.82 765.16 874.2 766.44
+zoom_box 1008.78 760.68 1010.16 761.96
+gui_select -point {1009.518 761.351}
+delete_drc_markers
+gui_fit
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 828.66 500.85 829.92 502.11
+gui_select -point {829.311 501.457}
+delete_drc_markers
+gui_fit
+write_drc_markers DTMF_CHIP.viols.drc
+report_markers -all -no_false_marker -report DTMF_CHIP.viols.rpt
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+gui_select -point {1942.920 957.921}
+check_connectivity -type all -check_geometry_loops -ignore_soft_pg_connects -error 1000 -warning 50
+gui_select -point {1697.458 983.759}
+zoom_box 1008.78 760.68 1010.16 761.96
+gui_select -point {1009.576 761.408}
+delete_drc_markers
+gui_fit
+gui_fit
+check_drc -view_window
+gui_select -point {2194.843 392.711}
+gui_select -point {1771.743 305.507}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+zoom_box 818.43 506.44 819.659 507.72
+zoom_box 819.073 507.198 819.068 507.208
+gui_select -point {819.068 507.218}
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+delete_drc_markers
+puts -nonewline sock7f26618ecc90 {-2 drc -pretrigger "no" -cellName "DTMF_CHIP" -vd "DTMF_CHIP" -layScale 0.0005}
+gui_fit
+gui_fit
+puts -nonewline sock7f2674854310 {-2 drc -pretrigger "no" -cellName "DTMF_CHIP" -vd "DTMF_CHIP" -layScale 0.0005}
+get_multi_cpu_usage -local_cpu
+set_db place_design_floorplan_mode 0
+eval_legacy { report_message -start_cmd }
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+set_db extract_rc_engine pre_route
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+eval_legacy { deleteBufferTree -decloneInv }
+set_db delaycal_use_default_delay_limit 101
+set_db delaycal_use_default_delay_limit 101
+set_db delaycal_default_net_delay 0
+set_db delaycal_default_net_delay 0
+set_db delaycal_default_net_load 0
+set_db delaycal_default_net_load 0
+set_db delaycal_default_net_load_ignore_for_ilm 0
+set_db delaycal_ignore_net_load 1
+set_db timing_enable_path_group_priority false
+set_db timing_constraint_enable_group_path_resetting false
+eval_legacy { set_global _is_ipo_interactive_path_groups 1 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 1 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 1 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 1 }
+set_path_group_options reg2reg_tmp.7671 -effort_level high
+eval_legacy { set_global _is_ipo_interactive_path_groups 0 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 0 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 0 }
+eval_legacy { set_global _is_ipo_interactive_path_groups 0 }
+set_db delaycal_ignore_net_load 0
+set_db delaycal_use_default_delay_limit 1000
+set_db delaycal_use_default_delay_limit 1000
+set_db delaycal_default_net_delay 1000ps
+set_db delaycal_default_net_delay 1000ps
+set_db delaycal_default_net_load 0.5pf
+set_db delaycal_default_net_load 0.5pf
+set_db delaycal_default_net_load_ignore_for_ilm 0
+eval_legacy { createBasicPathGroups -quiet }
+eval_legacy { set_global _is_ipo_interactive_path_groups 0 }
+reorder_scan
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d040c78
+set_db flow_metrics_snapshot_uuid 5d040c78
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d040c7c
+set_db flow_metrics_snapshot_uuid 5d040c7c
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+place_fix_congestion
+set_db timing_enable_path_group_priority false
+set_db timing_constraint_enable_group_path_resetting false
+puts {***** Total cpu  0:0:27}
+puts {***** Total real time  0:0:30}
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db extract_rc_engine pre_route
+set_db delaycal_ignore_net_load 0
+eval_legacy { report_message -end_cmd }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d040d93
+set_db flow_metrics_snapshot_uuid 5d040d93
+eval_legacy { is_attribute metric_category_default -obj_type root }
+eval_legacy { is_attribute metric_category_tcl -obj_type root }
+eval_legacy { is_attribute metric_capture_design_image -obj_type root }
+eval_legacy { is_attribute -obj_type root flow_run_tag }
+eval_legacy { is_attribute flow_template_feature_definition -obj_type root }
+eval_legacy { is_attribute flow_template_type -obj_type root }
+report_messages -errors
+get_message -id IMPSYT-6000 -count
+get_message -id IMPSYT-6000 -severity
+get_message -id IMPSYT-6000 -short
+get_message -id IMPVB-45 -count
+get_message -id IMPVB-45 -severity
+get_message -id IMPVB-45 -short
+get_message -id TECHLIB-1318 -count
+get_message -id TECHLIB-1318 -severity
+get_message -id TECHLIB-1318 -short
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d041a77
+set_db flow_metrics_snapshot_uuid 5d041a77
+gui_fit
+get_multi_cpu_usage -local_cpu
+get_multi_cpu_usage -cpu_per_remote_host
+get_multi_cpu_usage -remote_host
+set_db route_design_with_timing_driven 0
+set_db route_design_with_si_driven 0
+route_design -global_detail
+reset_db route_design_detail_post_route_spread_wire
+set_db route_design_reserve_space_for_multi_cut 1
+set_db route_design_concurrent_minimize_via_count_effort high
+set_db route_design_detail_end_iteration 11
+reset_db route_design_detail_end_iteration
+reset_db route_design_detail_end_iteration
+set_db route_design_detail_post_route_spread_wire 0.500000
+set_db route_design_detail_post_route_spread_wire auto
+set_db route_design_with_si_driven 0
+set_db route_design_with_timing_driven 0
+reset_db route_design_concurrent_minimize_via_count_effort
+reset_db route_design_reserve_space_for_multi_cut
+reset_db route_design_detail_post_route_spread_wire
+set_db route_design_with_timing_driven 0
+set_db route_design_with_si_driven 0
+route_design -global_detail
+reset_db route_design_detail_post_route_spread_wire
+set_db route_design_reserve_space_for_multi_cut 1
+set_db route_design_concurrent_minimize_via_count_effort high
+set_db route_design_detail_post_route_spread_wire 0.500000
+set_db route_design_detail_post_route_spread_wire auto
+set_db route_design_with_si_driven 0
+set_db route_design_with_timing_driven 0
+reset_db route_design_concurrent_minimize_via_count_effort
+reset_db route_design_reserve_space_for_multi_cut
+reset_db route_design_detail_post_route_spread_wire
+gui_select -point {604.209 701.403}
+delete_drc_markers
+gui_fit
+gui_fit
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+opt_design -post_route -setup -hold
+gui_select -point {-126.279 891.731}
+set_db check_implant 1
+set_db check_drc_implant_across_rows 1
+set_db check_drc_ndr_spacing 0
+set_db check_drc_inside_via_def 1
+set_db check_drc_exclude_pg_net 0
+set_db check_drc_ignore_trial_route 0
+set_db check_drc_report DTMF_CHIP.drc.rpt
+set_db check_drc_limit 1000
+check_drc
+set_db route_design_strict_honor_route_rule false
+set_db route_design_strict_honor_route_rule false
+set_db check_drc_area {0 0 0 0}
+gui_select -point {765.123 341.022}
+gui_select -point {772.124 345.689}
+gui_fit
+check_connectivity -type all -check_geometry_loops -ignore_soft_pg_connects -error 1000 -warning 50
+gui_select -point {-925.116 76.193}
+delete_selected_from_floorplan
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+opt_design -post_route -setup -hold
+gui_select -point {453.673 807.724}
+delete_selected_from_floorplan
+gui_fit
+delete_selected_from_floorplan
+gui_fit
+gui_set_draw_view fplan
+gui_select -point {-376.055 444.387}
+gui_select -point {-437.421 447.617}
+gui_select -point {-463.259 460.536}
+gui_select -point {-450.339 457.306}
+gui_select -toggle -point {-450.339 457.306}
+gui_set_draw_view place
+gui_fit
+write_stream ../../other/DTMF.gds -map_file streamOut.map -lib_name DesignLib -unit 2000 -mode ALL
+gui_select -point {-201.647 605.875}
+write_stream ../../other/DTMF.gds -map_file streamOut.map -lib_name DesignLib -unit 2000 -mode ALL
+gui_select -point {-576.301 631.714}
+gui_fit
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+gui_select -point {-618.288 282.899}
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+opt_signoff
+opt_signoff -hold
+eval_legacy { signoffTimeDesign -reportOnly -reportScript /tmp/innovus_temp_7671_cad8_kamalesh_IuNXIA/.eso_tmp_yDg1MG/empty.tcl }
+get_multi_cpu_usage -remote_host
+opt_signoff -setup
+eval_legacy { signoffTimeDesign -reportOnly -reportScript /tmp/innovus_temp_7671_cad8_kamalesh_IuNXIA/.eso_tmp_yDg1MG/empty.tcl }
+get_multi_cpu_usage -remote_host
+opt_area
+opt_design
+get_computed_shapes {{{0.875 2.2 1.105 2.555}} {{1.105 2.325 2.12 2.555}} {{2.12 2.075 2.17 2.555}} {{2.17 1.08 2.51 3.655}} {{2.51 1.08 2.74 1.31}} {{2.74 0.97 3.08 1.31}}} XOR {{{0.875 1.845 1.105 2.6}} {{2.69 3.195 2.8 3.655}} {{1.105 1.845 2.8 2.075}} {{2.74 0.97 2.8 1.31}} {{2.8 0.97 3.03 3.655}} {{3.03 0.97 3.08 1.31}}}
+get_computed_shapes {{{0.135 1.66 0.52 2.235}}} XOR {{{0.135 1.66 0.175 2.23}} {{0.175 1.66 0.515 2.235}} {{0.515 1.66 0.52 2.23}}}
+get_computed_shapes {{{0.68 1.81 0.8 2.215}} {{0.8 1.81 0.91 2.66}} {{0.91 1.985 1.03 2.66}} {{1.03 2.38 1.18 2.66}}} XOR {{{0.68 1.81 0.8 2.635}} {{0.8 1.81 0.91 2.66}} {{0.91 2.38 1.18 2.66}}}
+get_computed_shapes {{{0.0 -0.4 0.84 0.4}} {{0.84 -0.4 1.18 0.575}} {{1.18 -0.4 2.12 0.4}} {{2.12 -0.4 2.46 0.575}} {{2.46 -0.4 2.64 0.4}}} XOR {{{0.0 -0.4 2.1 0.4}} {{2.1 -0.4 2.44 0.575}} {{2.44 -0.4 2.64 0.4}}}
+get_computed_shapes {{{0.0 -0.4 1.1 0.4}} {{1.1 -0.4 1.44 0.575}} {{1.44 -0.4 3.54 0.4}} {{3.54 -0.4 3.88 0.575}} {{3.88 -0.4 4.62 0.4}}} XOR {{{0.0 -0.4 0.92 0.4}} {{0.92 -0.4 1.26 0.575}} {{1.26 -0.4 3.33 0.4}} {{3.33 -0.4 3.67 0.575}} {{3.67 -0.4 4.62 0.4}}}
+set_db delaycal_enable_high_fanout 1
+eval_legacy { set_global timing_enable_latch_borrow_mode_for_si_snalysis true }
+set_db delaycal_eng_copyNetPropToNewNet 1
+eval_legacy { checkPlace -noPreplaced -ignoreOutOfCore -noHalo -preserveMaskShift -noCheckPinAccess -noHardFence }
+eval_legacy { setIlmType 1 }
+set_db opt_drv_margin 0
+getenv USK_DEBUG_LEVEL
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d040a26
+set_db flow_metrics_snapshot_uuid 5d040a26
+eval_legacy { is_attribute metric_category_default -obj_type root }
+eval_legacy { is_attribute metric_category_tcl -obj_type root }
+eval_legacy { is_attribute metric_capture_design_image -obj_type root }
+report_trial_congestion -hot_spot
+eval_legacy { is_attribute -obj_type root flow_run_tag }
+eval_legacy { is_attribute flow_template_feature_definition -obj_type root }
+eval_legacy { is_attribute flow_template_type -obj_type root }
+report_messages -errors
+get_message -id IMPEXT-5016 -count
+get_message -id IMPEXT-5016 -severity
+get_message -id IMPEXT-5016 -short
+get_message -id IMPSYT-6000 -count
+get_message -id IMPVB-45 -count
+get_message -id IMPOPT-6080 -count
+get_message -id IMPCTE-31 -count
+get_message -id IMPCTE-31 -severity
+get_message -id IMPCTE-31 -short
+get_message -id IMPESO-324 -count
+get_message -id IMPESO-324 -severity
+get_message -id IMPESO-324 -short
+get_message -id TECHLIB-1318 -count
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_current_run_id -obj_type root }
+eval_legacy { is_attribute metric_advanced_url_endpoint -obj_type root }
+eval_legacy { is_attribute metric_summary_metrics -obj_type root }
+set_db flow_schedule {}
+set_db flow_schedule {}
+set_db flow_metrics_snapshot_uuid 5d040f6f
+set_db flow_metrics_snapshot_uuid 5d040f6f
+set_db opt_drv_margin 0
+getenv USK_DEBUG_LEVEL
+opt_power
+opt_power -postRoute
+opt_power -postCts
+opt_signoff
+opt_signoff -drv
+eval_legacy { signoffTimeDesign -reportOnly -reportScript /tmp/innovus_temp_7671_cad8_kamalesh_IuNXIA/.eso_tmp_yDg1MG/empty.tcl }
+get_multi_cpu_usage -remote_host
+opt_signoff
+gui_select -point {-443.880 696.309}
+gui_fit

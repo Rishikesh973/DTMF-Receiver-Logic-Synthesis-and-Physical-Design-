@@ -1,0 +1,49 @@
+create_library_set -name default_libset_max\
+   -timing\
+    [list ../lib/rom_512x16A_slow_syn.lib\
+    ../lib/tpz973gwc-lite_slow.lib\
+    ../lib/ram_256x16A_slow_syn.lib\
+    ../lib/ram_128x16A_slow_syn.lib\
+    ../lib/slow.lib\
+    ../lib/pllclk_slow.lib]\
+   -si\
+    [list ../CDB/slow.cdb]
+create_library_set -name default_libset_min\
+   -timing\
+    [list ../lib/ram_256x16A_fast_syn.lib\
+    ../lib/pllclk_fast.lib\
+    ../lib/ram_128x16A_fast_syn.lib\
+    ../lib/fast.lib\
+    ../lib/rom_512x16A_fast_syn.lib\
+    ../lib/tpz973gbc-lite_fast.lib]\
+   -si\
+    [list ../CDB/fast.cdb]
+create_timing_condition -name default_mapping_tc_2\
+   -library_sets [list default_libset_min]
+create_timing_condition -name default_mapping_tc_1\
+   -library_sets [list default_libset_max]
+create_rc_corner -name default_rc_corner_worst\
+   -pre_route_res 1\
+   -post_route_res 1\
+   -pre_route_cap 1\
+   -post_route_cap 1\
+   -post_route_cross_cap 1\
+   -pre_route_clock_res 0\
+   -pre_route_clock_cap 0\
+   -qrc_tech ../QRC/t018s6mm.tch
+create_delay_corner -name default_delay_corner_max\
+   -timing_condition {default_mapping_tc_1}\
+   -rc_corner default_rc_corner_worst
+create_delay_corner -name default_delay_corner_ocv\
+   -early_timing_condition {default_mapping_tc_2}\
+   -late_timing_condition {default_mapping_tc_1}\
+   -rc_corner default_rc_corner_worst
+create_delay_corner -name default_delay_corner_min\
+   -timing_condition {default_mapping_tc_2}\
+   -rc_corner default_rc_corner_worst
+create_constraint_mode -name default_constraint_mode\
+   -sdc_files\
+    [list ./dtmf.sdc]
+create_analysis_view -name default_analysis_view_setup -constraint_mode default_constraint_mode -delay_corner default_delay_corner_max
+create_analysis_view -name default_analysis_view_hold -constraint_mode default_constraint_mode -delay_corner default_delay_corner_min
+set_analysis_view -setup [list default_analysis_view_setup] -hold [list default_analysis_view_hold]

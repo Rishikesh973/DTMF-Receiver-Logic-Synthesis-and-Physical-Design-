@@ -1,0 +1,44 @@
+[10/06 08:19:09      0s] 
+[10/06 08:19:09      0s] Cadence Innovus(TM) Implementation System.
+[10/06 08:19:09      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/06 08:19:09      0s] 
+[10/06 08:19:09      0s] Version:	v17.10-p006_1, built Wed May 31 11:06:15 PDT 2017
+[10/06 08:19:09      0s] Options:	-stylus 
+[10/06 08:19:09      0s] Date:		Fri Oct  6 08:19:09 2017
+[10/06 08:19:09      0s] Host:		vlsj-vinita (x86_64 w/Linux 2.6.32-71.el6.x86_64) (1core*1cpu*Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz 35840KB)
+[10/06 08:19:09      0s] OS:		Red Hat Enterprise Linux Workstation release 6.0 (Santiago)
+[10/06 08:19:09      0s] 
+[10/06 08:19:09      0s] License:
+[10/06 08:19:09      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[10/06 08:19:17      4s] 
+[10/06 08:19:17      4s] ***************************************************************************************
+[10/06 08:19:17      4s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[10/06 08:19:17      4s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[10/06 08:19:17      4s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[10/06 08:19:17      4s] ***************************************************************************************
+[10/06 08:19:17      4s] 
+[10/06 08:19:31     12s] @(#)CDS: Innovus v17.10-p006_1 (64bit) 05/31/2017 11:06 (Linux 2.6.18-194.el5)
+[10/06 08:19:31     12s] @(#)CDS: NanoRoute 17.10-p006_1 NR170516-1601/17_10-UB (database version 2.30, 378.7.1) {superthreading v1.44}
+[10/06 08:19:31     12s] @(#)CDS: AAE 17.10-p003 (64bit) 05/31/2017 (Linux 2.6.18-194.el5)
+[10/06 08:19:31     12s] @(#)CDS: CTE 17.10-p002_1 () May 18 2017 07:46:32 ( )
+[10/06 08:19:31     12s] @(#)CDS: SYNTECH 17.10-p001_1 () May 17 2017 01:24:45 ( )
+[10/06 08:19:31     12s] @(#)CDS: CPE v17.10-p003
+[10/06 08:19:31     12s] @(#)CDS: IQRC/TQRC 16.1.1-s140 (64bit) Fri Mar 17 16:46:12 PDT 2017 (Linux 2.6.18-194.el5)
+[10/06 08:19:31     12s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[10/06 08:19:31     12s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[10/06 08:19:31     12s] @(#)CDS: RCDB 11.10
+[10/06 08:19:31     12s] --- Running on vlsj-vinita (x86_64 w/Linux 2.6.32-71.el6.x86_64) (1core*1cpu*Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz 35840KB) ---
+[10/06 08:19:31     12s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_9657_vlsj-vinita_vinita_aQXpcQ.
+
+[10/06 08:19:31     12s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_9657_vlsj-vinita_vinita_aQXpcQ.
+[10/06 08:19:31     12s] 
+[10/06 08:19:31     12s] The soft stacksize limit is either up to the hard limit or larger than 0.2%RAM. No change is needed.
+[10/06 08:19:32     13s] Sourcing startup file /home/vinita/.cadence/innovus/gui.pref.tcl
+[10/06 08:19:32     13s] 
+[10/06 08:19:32     13s] **INFO:  MMMC transition support version v31-84 
+[10/06 08:19:32     13s] 
+[10/06 08:19:34     14s] @[DEV]innovus 1> 
+[10/06 08:19:59     16s] *** Memory Usage v#1 (Current mem = 549.027M, initial mem = 193.465M) ***
+[10/06 08:19:59     16s] *** Message Summary: 0 warning(s), 0 error(s)
+[10/06 08:19:59     16s] 
+[10/06 08:19:59     16s] --- Ending "Innovus" (totcpu=0:00:16.5, real=0:00:50.0, mem=549.0M) ---

@@ -1,0 +1,131 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Nov 24 12:28:44 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz
+init_design
+eval_legacy { set_analysis_view -sync_timing }
+read_def DTMF_CHIP_io.def
+gui_fit
+read_floorplan dtmf_blocks.fp
+gui_set_draw_view fplan
+gui_fit
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP earlyGRoute}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP earlyGRoute}
+gui_set_draw_view place
+opt_design -post_cts -hold
+gui_select -point {1752.365 873.947}
+eval_legacy { create_ccopt_clock_tree_spec -immediate }
+gui_open_ctd -id ctd_window
+time_design -post_cts
+write_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP postCTSopt}
+set_route_attributes -net DTMF_INST/TDSP_CORE_INST/read_data -shield_nets VDD
+get_route_attributes -net DTMF_INST/TDSP_CORE/read_data
+get_route_attributes -net DTMF_INST/TDSP_CORE_INST/read_data
+gui_select -point {1842.798 644.633}
+set_route_attributes -net DTMF_INST/clk -preferred_extra_space_tracks 2
+gui_select -point {1572.661 540.769}
+select_net DTMF_INST/TDSP_CORE_INST/read_data
+get_multi_cpu_usage -local_cpu
+get_multi_cpu_usage -cpu_per_remote_host
+get_multi_cpu_usage -remote_host
+set_db route_design_with_timing_driven 1
+set_db route_design_with_si_driven 1
+set_db route_design_selected_net_only 1
+set_db route_design_with_timing_driven 1
+set_db route_design_with_si_driven 1
+route_design -global_detail
+reset_db route_design_detail_post_route_spread_wire
+set_db route_design_reserve_space_for_multi_cut 1
+set_db route_design_concurrent_minimize_via_count_effort high
+set_db route_design_with_timing_driven 0
+set_db route_early_global_secondary_pg 0
+set_db timing_analysis_check_type setup
+set_db timing_analysis_type ocv
+set_db timing_analysis_cppr both
+set_db timing_analysis_check_type setup
+set_db timing_analysis_type ocv
+set_db extract_rc_engine pre_route
+set_db timing_analysis_check_type setup
+set_db timing_analysis_check_type setup
+set_db timing_analysis_type best_case_worst_case
+set_db timing_analysis_type best_case_worst_case
+set_db timing_analysis_cppr none
+reset_db timing_analysis_cppr
+set_db extract_rc_engine pre_route
+set_db route_design_with_timing_driven 1
+set_db route_design_with_si_driven 1
+set_db route_design_with_timing_driven 1
+reset_db route_design_concurrent_minimize_via_count_effort
+reset_db route_design_reserve_space_for_multi_cut
+reset_db route_design_detail_post_route_spread_wire
+gui_fit
+gui_set_draw_view fplan
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view place
+gui_fit
+set_layer_preference shield -is_visible 0
+set_layer_preference unknowState -is_visible 0
+set_layer_preference metalFill -is_visible 0
+set_layer_preference wire -is_visible 0
+set_layer_preference via -is_visible 0
+set_layer_preference patch -is_visible 0
+set_layer_preference trim -is_visible 0
+set_layer_preference shield -is_visible 1
+set_layer_preference unknowState -is_visible 1
+set_layer_preference metalFill -is_visible 1
+set_layer_preference wire -is_visible 1
+set_layer_preference via -is_visible 1
+set_layer_preference patch -is_visible 1
+set_layer_preference trim -is_visible 1
+set_layer_preference metalFill -is_selectable 0
+set_layer_preference wire -is_selectable 0
+set_layer_preference via -is_selectable 0
+set_layer_preference patch -is_selectable 0
+set_layer_preference shield -is_selectable 1
+set_layer_preference unknowState -is_selectable 1
+set_layer_preference metalFill -is_selectable 1
+set_layer_preference wire -is_selectable 1
+set_layer_preference via -is_selectable 1
+set_layer_preference patch -is_selectable 1
+set_layer_preference trim -is_selectable 1
+gui_fit
+gui_select -point {946.317 859.517}
+gui_select -point {948.773 869.342}
+gui_select -point {938.947 821.442}
+gui_select -point {943.861 811.617}
+gui_set_draw_view fplan
+gui_set_draw_view place
+gui_group_hinst
+gui_fit
+set_db timing_analysis_type ocv
+time_design -post_route
+time_design -post_route -hold
+opt_design -post_route -setup -hold
+time_design -post_route -hold
+opt_design -post_route -setup -hold
+time_design -post_route -hold
+write_db -oa_lib_cell_view {FEOADesign DTMF_CHIP DTMF_detailrouted}
+gui_select -point {-16.413 505.733}
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+gui_fit

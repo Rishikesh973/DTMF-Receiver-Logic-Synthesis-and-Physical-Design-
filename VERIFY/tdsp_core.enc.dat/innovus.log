@@ -1,0 +1,31 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.10-p006_1, built Wed May 31 11:06:15 PDT 2017
+Options:	-stylus 
+Date:		Fri Oct  6 08:19:09 2017
+Host:		vlsj-vinita (x86_64 w/Linux 2.6.32-71.el6.x86_64) (1core*1cpu*Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz 35840KB)
+OS:		Red Hat Enterprise Linux Workstation release 6.0 (Santiago)
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+
+***************************************************************************************
+INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+         has only limited customer testing. You are encouraged to work with Cadence directly
+         to qualify your usage and make sure it meets your needs before deploying it widely.
+***************************************************************************************
+
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_9657_vlsj-vinita_vinita_aQXpcQ.
+
+The soft stacksize limit is either up to the hard limit or larger than 0.2%RAM. No change is needed.
+Sourcing startup file /home/vinita/.cadence/innovus/gui.pref.tcl
+
+**INFO:  MMMC transition support version v31-84 
+
+@[DEV]innovus 1> 
+*** Memory Usage v#1 (Current mem = 549.027M, initial mem = 193.465M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:16.5, real=0:00:50.0, mem=549.0M) ---

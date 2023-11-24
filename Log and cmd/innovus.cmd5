@@ -1,0 +1,222 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Nov 23 13:48:13 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_db init_netlist_files DTMF_CHIP.v.gz
+set_db init_oa_ref_libs cellLib
+set_db init_oa_ref_libs {}
+set_db init_oa_ref_libs {cellLib techLib}
+set_db init_oa_ref_libs {techLib cellLib}
+set_db init_oa_abstract_views a
+set_db init_oa_abstract_views ab
+set_db init_oa_abstract_views abs
+set_db init_oa_abstract_views abst
+set_db init_oa_abstract_views abstr
+set_db init_oa_abstract_views abstra
+set_db init_oa_abstract_views abstrac
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views l
+set_db init_oa_layout_views la
+set_db init_oa_layout_views lay
+set_db init_oa_layout_views layo
+set_db init_oa_layout_views layou
+set_db init_oa_layout_views layout
+set_db init_power_nets V
+set_db init_power_nets VS
+set_db init_power_nets VSS
+set_db init_power_nets VS
+set_db init_power_nets V
+set_db init_power_nets VD
+set_db init_power_nets VDD
+set_db init_ground_nets V
+set_db init_ground_nets VD
+set_db init_ground_nets VDD
+set_db init_mmmc_files dtmf.view
+set_db init_oa_abstract_views abstract
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_power_nets VDD
+set_db init_ground_nets VDD
+set_db init_ground_nets VDD
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz
+set_current_design {}
+read_floorplan DTMF_CHIP_io.def
+init_design
+eval_legacy { setLibraryUnit -time none -internal }
+set_db floorplan_is_max_io_height 1
+set_io_flow_flag 0
+create_floorplan -core_density_size 1.0 0.7 0 0 0 0 -flip f
+set_all_ios_to_fixed -pin_only
+report_resource
+report_resource -start {Constraint file reading stats}
+current_design DTMF_CHIP
+report_resource -end {Constraint file reading stats}
+report_resource
+gui_select -point {0.088 0.019}
+gui_set_draw_view fplan
+write_via_defs vias.txt
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+gui_select -point {1845.523 421.551}
+gui_select -point {2172.880 869.027}
+gui_select -point {2832.530 925.568}
+gui_select -point {1841.169 -163.798}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_516x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_516x16_0_INST -ref_type core_boundary { -horizontal_edge_seperate} {1 -40 1} -vertical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_516x16_0_INST -ref_type core_boundary { -horizontal_edge_seperate} {1 -40 1} -vertical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary { }
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST { -ref_type} core_boundary { }
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 -10 0}
+delete_all_floorplan_objs
+delete_all_floorplan_objs
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+write_floorplan_script -sections relative_fplan menuAdd.tcl
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_select -rect {2647.829 77.445 2406.584 284.764}
+delete_all_floorplan_objs
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+deselect_all
+deselect_all
+deselect_all
+gui_select -point {1554.693 88.754}
+create_partition -hinst DTMF_INST/RAM_256x16_TEST_INST/RAM_256x16_INST -core_spacing 0.0 0.0 0.0 0.0 -rail_width 0.0 -min_pitch_left 2 -min_pitch_right 2 -min_pitch_top 2 -min_pitch_bottom 2 -reserved_layer { 1 2 3 4 5 6} -pin_layer_top { 2 4 6} -pin_layer_left { 3 5} -pin_layer_bottom { 2 4 6} -pin_layer_right { 3 5} -place_halo 0.0 0.0 0.0 0.0 -route_halo 0.0 -route_halo_top_layer 6 -route_halo_bottom_layer 1
+gui_set_draw_view fplan
+gui_select -point {2075.555 64.552}
+gui_select -point {2036.542 81.892}
+gui_select -toggle -point {-412.639 411.339}
+gui_select -toggle -point {-412.639 411.339}
+gui_select -toggle -point {2001.863 47.213}
+delete_all_floorplan_objs
+delete_drc_markers
+gui_redraw
+gui_set_draw_view fplan
+set_db plan_design_effort high
+set_db plan_design_incremental 0
+set_db plan_design_boundary_place 1
+set_db plan_design_fix_placed_macros 0
+plan_design
+set_db place_global_place_io_pins 0
+set_db place_global_timing_effort low
+set_db place_global_timing_effort medium
+reset_db place_global_timing_effort
+set_db place_global_place_io_pins 0
+eval_legacy { uiSetTool defineArea Rda_BP::set_area_box }
+place_blocks_refine -permute_pack
+set_db plan_design_effort medium
+set_db plan_design_effort medium
+set_db plan_design_effort medium
+set_db plan_design_effort high
+set_db finish_floorplan_active_objs {core macro}
+set_db finish_floorplan_drc_region_objs {macro macroHalo hardBlkg minGap coreSpacing}
+set_db finish_floorplan_add_blockage_direction xy
+set_db finish_floorplan_override 0
+delete_all_floorplan_objs
+gui_set_tool select
+set_layer_preference cellBlkgObj -is_visible 1
+set_layer_preference obsblock -is_visible 1
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference obsio -is_visible 1
+set_layer_preference obsoverlap -is_visible 1
+set_layer_preference obsother -is_visible 1
+set_layer_preference cellBlkgObj -is_visible 0
+set_layer_preference obsblock -is_visible 0
+set_layer_preference obsstdCell -is_visible 0
+set_layer_preference obsio -is_visible 0
+set_layer_preference obsoverlap -is_visible 0
+set_layer_preference obsother -is_visible 0
+set_layer_preference pinObj -is_visible 0
+set_layer_preference pinblock -is_visible 0
+set_layer_preference pinstdCell -is_visible 0
+set_layer_preference pinio -is_visible 0
+set_layer_preference piniopin -is_visible 0
+set_layer_preference pinother -is_visible 0
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+set_layer_preference cellBlkgObj -is_visible 1
+set_layer_preference layoutObj -is_visible 1
+set_layer_preference pinObj -is_visible 0
+set_layer_preference cellBlkgObj -is_visible 0
+set_layer_preference layoutObj -is_visible 0
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+set_layer_preference cellBlkgObj -is_visible 1
+set_layer_preference layoutObj -is_visible 1
+set_layer_preference pinObj -is_visible 0
+set_layer_preference pinblock -is_visible 0
+set_layer_preference pinstdCell -is_visible 0
+set_layer_preference pinio -is_visible 0
+set_layer_preference piniopin -is_visible 0
+set_layer_preference pinother -is_visible 0
+set_layer_preference pinObj -is_selectable 1
+set_layer_preference cellBlkgObj -is_selectable 1
+set_layer_preference layoutObj -is_selectable 1
+set_layer_preference pinObj -is_selectable 0
+set_layer_preference cellBlkgObj -is_selectable 0
+set_layer_preference layoutObj -is_selectable 0
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+set_layer_preference cellBlkgObj -is_visible 0
+set_layer_preference obsblock -is_visible 0
+set_layer_preference obsstdCell -is_visible 0
+set_layer_preference obsio -is_visible 0
+set_layer_preference obsoverlap -is_visible 0
+set_layer_preference obsother -is_visible 0
+set_layer_preference layoutObj -is_visible 0
+gui_select -point {1629.068 141.049}
+gui_select -point {1919.756 90.051}
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+write_floorplan_script -sections relative_fplan stylus_scripts/innovus_config.tcl
+gui_select -point {1863.658 630.630}
+gui_select -point {3072.311 237.945}
+gui_select -point {2674.526 543.933}
+gui_select -point {3225.305 503.135}
+gui_select -point {1261.881 1232.407}
+gui_select -rect {1261.881 1232.407 1399.576 1268.105}

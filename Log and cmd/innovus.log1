@@ -1,0 +1,16 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.12-s095_1, built Thu Nov 9 12:10:01 PST 2017
+Options:	-vdi -tylus 
+Date:		Thu Nov 23 11:03:11 2023
+Host:		cad8 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (2cores*4cpus*Intel(R) Core(TM) i3-3240 CPU @ 3.40GHz 3072KB)
+OS:		Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+License:
+		license for feature "Virtuoso_Digital_Implem" does not exist.
+		Checkout failed: ERROR (LMF-10005): License call failed for feature Virtuoso_Digital_Implem, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-10005' for more information.

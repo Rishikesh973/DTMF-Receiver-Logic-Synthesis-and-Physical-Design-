@@ -1,0 +1,1858 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Nov 23 11:05:11 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_db init_netlist_files DTMF_CHIP.v.gz
+set_db init_oa_ref_libs techLib
+set_db init_oa_abstract_views t
+set_db init_oa_abstract_views te
+set_db init_oa_abstract_views tec
+set_db init_oa_abstract_views tech
+set_db init_oa_abstract_views techL
+set_db init_oa_abstract_views techLi
+set_db init_oa_abstract_views techLib
+set_db init_oa_abstract_views {techLib }
+set_db init_oa_abstract_views {techLib c}
+set_db init_oa_abstract_views {techLib ce}
+set_db init_oa_abstract_views {techLib cel}
+set_db init_oa_abstract_views {techLib cell}
+set_db init_oa_abstract_views {techLib cellL}
+set_db init_oa_abstract_views {techLib cellLi}
+set_db init_oa_abstract_views {techLib cellLiv}
+set_db init_oa_abstract_views {techLib cellLi}
+set_db init_oa_abstract_views {techLib cellLib}
+set_db init_oa_ref_libs {}
+set_db init_oa_ref_libs {techLib cellLib}
+set_db init_oa_abstract_views {}
+set_db init_oa_abstract_views a
+set_db init_oa_abstract_views ab
+set_db init_oa_abstract_views abs
+set_db init_oa_abstract_views abst
+set_db init_oa_abstract_views abstr
+set_db init_oa_abstract_views abstre
+set_db init_oa_abstract_views abstr
+set_db init_oa_abstract_views abstra
+set_db init_oa_abstract_views abstrac
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views l
+set_db init_oa_layout_views la
+set_db init_oa_layout_views lay
+set_db init_oa_layout_views layo
+set_db init_oa_layout_views layou
+set_db init_oa_layout_views layout
+set_db init_power_nets V
+set_db init_power_nets VD
+set_db init_power_nets VDD
+set_db init_ground_nets V
+set_db init_ground_nets VS
+set_db init_ground_nets VSS
+set_db init_mmmc_files dtmf.view
+read_def DTMF_CHIP_io.def
+read_def DTMF_CHIP_io.def
+set_db init_oa_abstract_views abstract
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+set_db init_ground_nets VSS
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz -top DTMF_CHIP
+set_current_design DTMF_CHIP
+read_floorplan dtmf.IO.def
+init_design
+eval_legacy { setLibraryUnit -time none -internal }
+set_db floorplan_is_max_io_height 1
+set_io_flow_flag 0
+create_floorplan -core_density_size 1.0 0.7 0 0 0 0 -flip f
+set_all_ios_to_fixed -pin_only
+report_resource
+report_resource -start {Constraint file reading stats}
+current_design DTMF_CHIP
+report_resource -end {Constraint file reading stats}
+report_resource
+gui_select -point {0.083 0.020}
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_redraw
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+write_via_defs vias.txt
+gui_select -point {2512.542 714.197}
+gui_fit
+zoom_in
+zoom_in
+zoom_in
+gui_fit
+gui_fit
+zoom_out
+zoom_in
+set_layer_preference mGrid -is_visible 1
+set_layer_preference pGrid -is_visible 1
+set_layer_preference userGrid -is_visible 1
+set_layer_preference iGrid -is_visible 1
+set_layer_preference fmGrid -is_visible 1
+set_layer_preference fiGrid -is_visible 1
+set_layer_preference fpGrid -is_visible 1
+set_layer_preference gcell -is_visible 1
+set_layer_preference trimGridObj -is_visible 1
+set_layer_preference pgViaGridObj -is_visible 1
+set_layer_preference mGrid -is_visible 0
+set_layer_preference pGrid -is_visible 0
+set_layer_preference userGrid -is_visible 0
+set_layer_preference iGrid -is_visible 0
+set_layer_preference fmGrid -is_visible 0
+set_layer_preference fiGrid -is_visible 0
+set_layer_preference fpGrid -is_visible 0
+set_layer_preference gcell -is_visible 0
+set_layer_preference trimGridObj -is_visible 0
+set_layer_preference pgViaGridObj -is_visible 0
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+gui_set_tool ruler
+set_layer_preference layerBlk -is_visible 1
+set_layer_preference layerBlk -is_selectable 1
+set_layer_preference allcust -is_visible 0 -is_selectable 0
+set_layer_preference term -is_visible 0
+set_layer_preference screen -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference screen -color #ffcbcf -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference areaIo -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference areaIo -color #888b8c -stipple dot4
+set_layer_preference blackBox -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference blackBox -color #626565 -stipple solid
+set_layer_preference block -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference block -color #888b8c -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference pinblock -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinblock -is_visible 0 -is_selectable 0
+set_layer_preference obsblock -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obsblock -is_visible 0 -is_selectable 0
+set_layer_preference bumpBack -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference bumpBack -color {DodgerBlue3 red orange #c88686} -stipple grid
+set_layer_preference bump -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference bump -color {DodgerBlue3 red orange #c88686} -stipple dot4
+set_layer_preference busguide -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference busguide -color {pink #ffc0ff #00ff00 #0000ff #ffff00 #ff00ff #00ffff #ff8a00 #00ff8e #8e00ff #8eff00 #ff008e #008aff #ff8a8e #8eff8e #8e8aff #ffff8e #ff8aff #8effff #ff5500 #00ff59 #5900ff #59ff00 #ff0055 #0055ff #bebebe #808080 #a0a0a0 #ff80ff #ff0000} -stipple_data 8 8 {0x00 0x00 0x00 0x08 0x10 0x00 0x00 0x00}
+set_layer_preference clock -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference clock -color white -stipple none
+set_layer_preference coverCell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference coverCell -color #888b8c -stipple dot4
+set_layer_preference cover -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference cover -color #ffaa00 -stipple dot4
+set_layer_preference drcRegion -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference drcRegion -color magenta -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference datapath -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference datapath -color LightBlue -stipple_data 8 4 {0x00 0x00 0xff 0x00}
+set_layer_preference fence -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fence -color #ff9966 -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference fillBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fillBlk -color yellow -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference fixed -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fixed -color #00d0d0 -stipple dot4
+set_layer_preference pgGround -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pgGround -color white -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference guide -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference guide -color #f3b2e3 -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference io -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference io -color #888b8c -stipple dot4
+set_layer_preference pinio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinio -is_visible 0 -is_selectable 0
+set_layer_preference obsio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obsio -is_visible 0 -is_selectable 0
+set_layer_preference ioSlot -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ioSlot -color #009900 -stipple_data 8 8 {0x02 0x02 0x02 0x02 0x02 0xff 0x02 0x02}
+set_layer_preference piniopin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference piniopin -is_visible 0 -is_selectable 0
+set_layer_preference ioRow -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ioRow -color #4b4b4b -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference powerNet -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference powerNet -color {#004e72 #a2cd5a #caff70 #eedd82 #ffff00 #ffd700 #ffa500 #ff7f50 #ff0000 green #8cf600 #aef600 #d2f600 yellow gold orange DarkOrange red #f2f2f6f6f8f8 white} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 1 -is_selectable 1
+set_layer_preference inst -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference inst -color #888b8c -stipple dot4
+set_layer_preference isolation -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference isolation -color #00ff00 -stipple dot4
+set_layer_preference macroOnly -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference macroOnly -color green -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference congTag -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congTag -color {red orange green} -stipple solid
+set_layer_preference metalFill -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference metalFill -color brown -stipple none
+set_layer_preference hinst -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference hinst -color #f3b2e3 -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference obstruct -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obstruct -color #582720 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference funcother -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference funcother -color #c1cadd -stipple dot4
+set_layer_preference pinother -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinother -is_visible 0 -is_selectable 0
+set_layer_preference obsother -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obsother -is_visible 0 -is_selectable 0
+set_layer_preference obsoverlap -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obsoverlap -is_visible 1 -is_selectable 1
+set_layer_preference partition -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference partition -color #cf7d5f -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference ptnFeed -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ptnFeed -color white -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference ptnPinBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ptnPinBlk -color red -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference phyCell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference phyCell -color #888b8c -stipple dot4
+set_layer_preference routeGuide -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference routeGuide -color white -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference place -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference place -color #c1cadd -stipple dot4
+set_layer_preference pgPower -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pgPower -color white -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference pwrdm -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pwrdm -color {#de0000 gold #9F8050 cyan red green blue yellow magenta orange purple brown pink skyblue navy sandybrown DodgerBlue3 #d0d0d0 #e0e0e0 #d8d8d8 #e8e8e8 #666666 #368229 #293682 #a8a8a8 #b8b8b8 #903390 #d19090 #c023d0 #c84598 #45c898 #98c545} -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference netRect -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference netRect -color #004ed2 -stipple_data 8 4 {0x12 0x55 0x12 0x55} -is_visible 0 -is_selectable 0
+set_layer_preference pwrswt -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pwrswt -color #ff55ff -stipple dot4
+set_layer_preference region -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference region -color #f3b283 -stipple_data 8 4 {0x55 0xaa 0x55 0xaa}
+set_layer_preference layerBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference layerBlk -color yellow -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference flop -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference flop -color #00d0d0 -stipple dot4
+set_layer_preference shift -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference shift -color #ff0000 -stipple dot4
+set_layer_preference net -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference net -color blue -stipple none
+set_layer_preference sizeBlkg -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference sizeBlkg -color magenta -stipple dot4
+set_layer_preference slotBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference slotBlk -color yellow -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference softfix -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference softfix -color #ff55ff -stipple dot4
+set_layer_preference power -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference power -color white -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference stdRow -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference stdRow -color #4b4b4b -is_selectable 0 -stipple none
+set_layer_preference stdCell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference stdCell -color #888b8c -stipple dot4
+set_layer_preference pinstdCell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinstdCell -is_visible 0 -is_selectable 0
+set_layer_preference obsstdCell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference obsstdCell -is_visible 0 -is_selectable 0
+set_layer_preference term -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference term -color #f0d218 -is_visible 1 -is_selectable 1 -stipple_data 8 4 {0xaa 0x55 0xaa 0x55}
+set_layer_preference trimBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference trimBlk -color lightblue -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference undefBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference undefBlk -color yellow -stipple_data 8 4 {0x20 0x04 0x20 0x04}
+set_layer_preference unplace -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference unplace -color #aa5500 -stipple dot4
+set_layer_preference violation -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference violation -color white -line_width 2 -stipple solid
+set_layer_preference VirtualShape -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference VirtualShape -color white -stipple solid
+set_layer_preference whatIfShape -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference whatIfShape -color white -stipple none
+set_layer_preference aggress -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference aggress -color white -stipple solid
+set_layer_preference blockHalo -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference blockHalo -color #d26c6c -stipple solid
+set_layer_preference pGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pGrid -color gray -is_visible 0 -stipple none
+set_layer_preference blkLink -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference blkLink -color green -line_width 2
+set_layer_preference eol -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference eol -is_visible 0 -stipple none
+set_layer_preference bumpConnect -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference bumpConnect -color yellow -stipple none
+set_layer_preference layoutObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference layoutObj -color blue -is_visible 0 -stipple none
+set_layer_preference channel -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference channel -color red -line_width 5 -stipple none
+set_layer_preference congChan -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congChan -color red -is_visible 0 -stipple none
+set_layer_preference congestObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congestObj -color white -is_visible 0 -stipple none
+set_layer_preference congest -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congest -color red -is_visible 0 -stipple_data 8 4 {0x12 0x48 0x21 0x84}
+set_layer_preference densityMap -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference densityMap -is_visible 0 -line_width 2
+set_layer_preference unknowState -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference unknowState -color white -stipple none
+set_layer_preference effectRes -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference effectRes -color { #8cf600 #aef600 #d2f600 yellow gold orange DarkOrange red white blue} -is_visible 1 -stipple none
+set_layer_preference fGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fGrid -color gray -is_visible 0 -stipple none
+set_layer_preference fiGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fiGrid -color gray -is_visible 0 -stipple none
+set_layer_preference fmGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fmGrid -color gray -is_visible 0 -stipple none
+set_layer_preference fpGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fpGrid -color gray -is_visible 0 -stipple none
+set_layer_preference flightLine -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference flightLine -color blue -stipple none
+set_layer_preference gcell -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference gcell -color yellow -is_visible 0 -stipple none
+set_layer_preference gcellOvflow -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference gcellOvflow -color white -is_visible 0 -line_width 4 -stipple none
+set_layer_preference goObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference goObj -color yellow -stipple none
+set_layer_preference gridRes -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference gridRes -color red -is_visible 1 -stipple none
+set_layer_preference iGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference iGrid -color gray -is_visible 0 -stipple none
+set_layer_preference lithoHalo -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference lithoHalo -color purple -stipple brick
+set_layer_preference macroSitePattern -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference macroSitePattern -color #58d0ca -is_visible 0 -stipple none
+set_layer_preference mGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference mGrid -color white -is_visible 0 -stipple none
+set_layer_preference metalDensityMap -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference metalDensityMap -is_visible 0 -line_width 2
+set_layer_preference nonPrefTrackObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference nonPrefTrackObj -color white -is_visible 0 -stipple none
+set_layer_preference overlapBlk -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference overlapBlk -color green -stipple solid -is_visible 0
+set_layer_preference overlapGuide -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference overlapGuide -color blue -stipple solid -is_visible 0
+set_layer_preference overlapMacro -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference overlapMacro -color white -stipple solid -is_visible 0
+set_layer_preference pgViaGridObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pgViaGridObj -color white -is_visible 0 -stipple none
+set_layer_preference gdsii -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference gdsii -is_visible 0
+set_layer_preference pinDensityMap -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinDensityMap -is_visible 0 -line_width 2
+set_layer_preference pinText -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference pinText -color white -stipple none
+set_layer_preference portNum -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference portNum -color white -is_visible 0 -stipple none
+set_layer_preference powerDensity -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference powerDensity -is_visible 0
+set_layer_preference trackObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference trackObj -color white -is_visible 0 -stipple none
+set_layer_preference reduced -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference reduced -color #58d0ca -is_visible 1 -stipple none
+set_layer_preference relFPlan -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference relFPlan -color yellow -stipple solid
+set_layer_preference resizeFPLine2 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference resizeFPLine2 -color green -stipple solid
+set_layer_preference resizeFPLine1 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference resizeFPLine1 -color yellow -stipple solid
+set_layer_preference routeCongest -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference routeCongest -is_visible 0
+set_layer_preference routingHalo -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference routingHalo -color brown -stipple brick
+set_layer_preference sitePattern -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference sitePattern -color #4b4b4b -is_visible 0 -stipple none
+set_layer_preference ruler -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ruler -color yellow -stipple none
+set_layer_preference rulerText -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference rulerText -color yellow -stipple none
+set_layer_preference select -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference select -color white -stipple solid
+set_layer_preference shield -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference shield -color white -stipple none
+set_layer_preference text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference text -color white -stipple none
+set_layer_preference timingMap -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference timingMap -is_visible 0 -line_width 2
+set_layer_preference slack -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference slack -is_visible 1
+set_layer_preference trialTrack -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference trialTrack -color white -is_visible 0 -stipple none
+set_layer_preference trimGridObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference trimGridObj -color white -is_visible 0 -stipple none
+set_layer_preference trim -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference trim -color white -stipple none
+set_layer_preference userGrid -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference userGrid -color gray -is_visible 0 -stipple none
+set_layer_preference ctdObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference ctdObj -color {red green blue yellow magenta cyan orange purple white} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 1
+set_layer_preference clkTree -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference clkTree -stipple none -color {#004e72 #004ea8 #004ed2 #004ef2 #00acf2 #00caf2 #00f2f2 #00f2d2 #00f2aa green #8cf600 #aef600 #d2f600 yellow #fed600 #feb800 #fe9800 red #f2f2f6f6f8f8 white}
+set_layer_preference dpt -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference dpt -color {gray red green yellow} -stipple none -is_visible 1
+set_layer_preference fpConn -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference fpConn -color {red green blue yellow magenta cyan orange purple white} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 1
+set_layer_preference flColors -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference flColors -color {red orange yellow green blue white white white white white} -is_visible 0
+set_layer_preference gtdObj -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference gtdObj -color {#ffffff #ff0000 #ffc0cb #ffa500 #ffd700 #00ff00 #006400 #1dd8e6 #00008b} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 1
+set_layer_preference congestH -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congestH -stipple none -color {white white white red yellow green cyan blue black black} -is_visible 0
+set_layer_preference checkFPlanSpace -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference checkFPlanSpace -color {red orange white} -stipple solid
+set_layer_preference substrateNoise -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference substrateNoise -color {#0055ff #00c9ff #00ff77 #45ff00 #8bff00 #cbff00 #fff700 #ff9d00 #ff2f00 #c30000} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 0
+set_layer_preference thermal -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference thermal -color {#0055ff #00c9ff #00ff77 #45ff00 #8bff00 #cbff00 #fff700 #ff9d00 #ff2f00 #c30000} -stipple_data 8 4 {0xaa 0x55 0xaa 0x55} -is_visible 0
+set_layer_preference congestV -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference congestV -stipple none -color {white white white red yellow green cyan blue black black} -is_visible 0
+set_layer_preference world -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference world -color {yellow green blue} -stipple none
+set_layer_preference M0 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0 -color sandybrown -stipple slash2
+set_layer_preference M0Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Hi -color white -stipple slash2
+set_layer_preference M0Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Cont -color plum -stipple dot4
+set_layer_preference M0Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Track -color sandybrown -stipple cross
+set_layer_preference M0Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Pin -color sandybrown -stipple cross
+set_layer_preference M0ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0ContPin -color sandybrown -stipple dot4
+set_layer_preference M0RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0RB -color sandybrown -stipple brick
+set_layer_preference M0ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0ContRB -color sandybrown -stipple dot8_2
+set_layer_preference M0Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Vio -color white -stipple solid -line_width 2
+set_layer_preference M0ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0ContVio -color white -stipple solid -line_width 2
+set_layer_preference M0Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Text -color sandybrown
+set_layer_preference M0EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0EOL -color sandybrown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M0Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M0Patch -color sandybrown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M1 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1 -color blue -stipple backslash2
+set_layer_preference M1Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Hi -color white -stipple backslash2
+set_layer_preference M1Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Cont -color blue -stipple dot4
+set_layer_preference M1Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Track -color blue -stipple cross
+set_layer_preference M1Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Pin -color blue -stipple cross
+set_layer_preference M1ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1ContPin -color blue -stipple dot4
+set_layer_preference M1RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1RB -color blue -stipple brick
+set_layer_preference M1ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1ContRB -color blue -stipple dot8_1
+set_layer_preference M1Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Vio -color white -stipple solid -line_width 2
+set_layer_preference M1ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1ContVio -color white -stipple solid -line_width 2
+set_layer_preference M1Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Text -color blue -is_selectable 0
+set_layer_preference M1EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1EOL -color blue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M1Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M1Patch -color blue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M2 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2 -color red -stipple slash2
+set_layer_preference M2Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Hi -color white -stipple slash2
+set_layer_preference M2Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Cont -color red -stipple dot4
+set_layer_preference M2Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Track -color red -stipple cross
+set_layer_preference M2Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Pin -color red -stipple cross
+set_layer_preference M2ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2ContPin -color red -stipple dot4
+set_layer_preference M2RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2RB -color red -stipple brick
+set_layer_preference M2ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2ContRB -color red -stipple dot8_2
+set_layer_preference M2Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Vio -color white -stipple solid -line_width 2
+set_layer_preference M2ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2ContVio -color white -stipple solid -line_width 2
+set_layer_preference M2Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Text -color red -is_selectable 0
+set_layer_preference M2EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2EOL -color red -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M2Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M2Patch -color red -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M3 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3 -color #00d000 -stipple backslash
+set_layer_preference M3Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Hi -color white -stipple backslash
+set_layer_preference M3Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Cont -color #00d000 -stipple dot4
+set_layer_preference M3Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Track -color #00d000 -stipple cross
+set_layer_preference M3Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Pin -color #00d000 -stipple cross
+set_layer_preference M3ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3ContPin -color #00d000 -stipple dot4
+set_layer_preference M3RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3RB -color #00d000 -stipple brick
+set_layer_preference M3ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3ContRB -color #00d000 -stipple dot8_1
+set_layer_preference M3Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Vio -color white -stipple solid -line_width 2
+set_layer_preference M3ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3ContVio -color white -stipple solid -line_width 2
+set_layer_preference M3Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Text -color #00d000 -is_selectable 0
+set_layer_preference M3EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3EOL -color #00d000 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M3Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M3Patch -color #00d000 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M4 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4 -color #d0d000 -stipple slash
+set_layer_preference M4Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Hi -color white -stipple slash
+set_layer_preference M4Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Cont -color #d0d000 -stipple dot4
+set_layer_preference M4Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Track -color #d0d000 -stipple cross
+set_layer_preference M4Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Pin -color #d0d000 -stipple cross
+set_layer_preference M4ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4ContPin -color #d0d000 -stipple dot4
+set_layer_preference M4RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4RB -color #d0d000 -stipple brick
+set_layer_preference M4ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4ContRB -color #d0d000 -stipple dot8_2
+set_layer_preference M4Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Vio -color white -stipple solid -line_width 2
+set_layer_preference M4ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4ContVio -color white -stipple solid -line_width 2
+set_layer_preference M4Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Text -color #d0d000 -is_selectable 0
+set_layer_preference M4EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4EOL -color #d0d000 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M4Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M4Patch -color #d0d000 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M5 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5 -color brown -stipple backslash
+set_layer_preference M5Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Hi -color white -stipple backslash
+set_layer_preference M5Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Cont -color brown -stipple dot4
+set_layer_preference M5Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Track -color brown -stipple cross
+set_layer_preference M5Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Pin -color brown -stipple cross
+set_layer_preference M5ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5ContPin -color brown -stipple dot4
+set_layer_preference M5RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5RB -color brown -stipple brick
+set_layer_preference M5ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5ContRB -color brown -stipple dot8_1
+set_layer_preference M5Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Vio -color white -stipple solid -line_width 2
+set_layer_preference M5ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5ContVio -color white -stipple solid -line_width 2
+set_layer_preference M5Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Text -color brown -is_selectable 0
+set_layer_preference M5EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5EOL -color brown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M5Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M5Patch -color brown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M6 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6 -color orange -stipple slash
+set_layer_preference M6Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Hi -color white -stipple slash
+set_layer_preference M6Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Cont -color orange -stipple dot4
+set_layer_preference M6Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Track -color orange -stipple cross
+set_layer_preference M6Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Pin -color orange -stipple cross
+set_layer_preference M6ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6ContPin -color orange -stipple dot4
+set_layer_preference M6RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6RB -color orange -stipple brick
+set_layer_preference M6ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6ContRB -color orange -stipple dot8_2
+set_layer_preference M6Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Vio -color white -stipple solid -line_width 2
+set_layer_preference M6ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6ContVio -color white -stipple solid -line_width 2
+set_layer_preference M6Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Text -color orange -is_selectable 0
+set_layer_preference M6EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6EOL -color orange -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M6Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M6Patch -color orange -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M7 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7 -color #d000d0 -stipple backslash
+set_layer_preference M7Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Hi -color white -stipple backslash
+set_layer_preference M7Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Cont -color #d000d0 -stipple dot4
+set_layer_preference M7Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Track -color #d000d0 -stipple cross
+set_layer_preference M7Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Pin -color #d000d0 -stipple cross
+set_layer_preference M7ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7ContPin -color #d000d0 -stipple dot4
+set_layer_preference M7RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7RB -color #d000d0 -stipple brick
+set_layer_preference M7ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7ContRB -color #d000d0 -stipple dot8_1
+set_layer_preference M7Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Vio -color white -stipple solid -line_width 2
+set_layer_preference M7ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7ContVio -color white -stipple solid -line_width 2
+set_layer_preference M7Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Text -color #d000d0 -is_selectable 0
+set_layer_preference M7EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7EOL -color #d000d0 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M7Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M7Patch -color #d000d0 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M8 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8 -color #00d0d0 -stipple slash
+set_layer_preference M8Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Hi -color white -stipple slash
+set_layer_preference M8Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Cont -color #00d0d0 -stipple dot4
+set_layer_preference M8Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Track -color #00d0d0 -stipple cross
+set_layer_preference M8Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Pin -color #00d0d0 -stipple cross
+set_layer_preference M8ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8ContPin -color #00d0d0 -stipple dot4
+set_layer_preference M8RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8RB -color #00d0d0 -stipple brick
+set_layer_preference M8ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8ContRB -color #00d0d0 -stipple dot8_2
+set_layer_preference M8Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Vio -color white -stipple solid -line_width 2
+set_layer_preference M8ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8ContVio -color white -stipple solid -line_width 2
+set_layer_preference M8Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Text -color #00d0d0 -is_selectable 0
+set_layer_preference M8EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8EOL -color #00d0d0 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M8Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M8Patch -color #00d0d0 -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M9 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9 -color saddlebrown -stipple backslash
+set_layer_preference M9Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Hi -color white -stipple backslash
+set_layer_preference M9Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Cont -color saddlebrown -stipple dot4
+set_layer_preference M9Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Track -color saddlebrown -stipple cross
+set_layer_preference M9Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Pin -color saddlebrown -stipple cross
+set_layer_preference M9ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9ContPin -color saddlebrown -stipple dot4
+set_layer_preference M9RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9RB -color saddlebrown -stipple brick
+set_layer_preference M9ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9ContRB -color saddlebrown -stipple dot8_1
+set_layer_preference M9Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Vio -color white -stipple solid -line_width 2
+set_layer_preference M9ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9ContVio -color white -stipple solid -line_width 2
+set_layer_preference M9Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Text -color saddlebrown -is_selectable 0
+set_layer_preference M9EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9EOL -color saddlebrown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M9Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M9Patch -color saddlebrown -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M10 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10 -color yellow -stipple slash
+set_layer_preference M10Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Hi -color white -stipple slash
+set_layer_preference M10Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Cont -color yellow -stipple dot4
+set_layer_preference M10Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Track -color yellow -stipple cross
+set_layer_preference M10Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Pin -color yellow -stipple cross
+set_layer_preference M10ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10ContPin -color yellow -stipple dot4
+set_layer_preference M10RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10RB -color yellow -stipple brick
+set_layer_preference M10ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10ContRB -color yellow -stipple dot8_2
+set_layer_preference M10Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Vio -color white -stipple solid -line_width 2
+set_layer_preference M10ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10ContVio -color white -stipple solid -line_width 2
+set_layer_preference M10Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Text -color yellow -is_selectable 0
+set_layer_preference M10EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10EOL -color yellow -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M10Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M10Patch -color yellow -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M11 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11 -color green -stipple backslash
+set_layer_preference M11Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Hi -color white -stipple backslash
+set_layer_preference M11Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Cont -color green -stipple dot4
+set_layer_preference M11Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Track -color green -stipple cross
+set_layer_preference M11Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Pin -color green -stipple cross
+set_layer_preference M11ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11ContPin -color green -stipple dot4
+set_layer_preference M11RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11RB -color green -stipple brick
+set_layer_preference M11ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11ContRB -color green -stipple dot8_2
+set_layer_preference M11Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Vio -color white -stipple solid -line_width 2
+set_layer_preference M11ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11ContVio -color white -stipple solid -line_width 2
+set_layer_preference M11Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Text -color green -is_selectable 0
+set_layer_preference M11EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11EOL -color green -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M11Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M11Patch -color green -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M12 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12 -color magenta -stipple slash
+set_layer_preference M12Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Hi -color white -stipple slash
+set_layer_preference M12Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Cont -color magenta -stipple dot4
+set_layer_preference M12Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Track -color magenta -stipple cross
+set_layer_preference M12Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Pin -color magenta -stipple cross
+set_layer_preference M12ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12ContPin -color magenta -stipple dot4
+set_layer_preference M12RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12RB -color magenta -stipple brick
+set_layer_preference M12ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12ContRB -color magenta -stipple dot8_2
+set_layer_preference M12Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Vio -color white -stipple solid -line_width 2
+set_layer_preference M12ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12ContVio -color white -stipple solid -line_width 2
+set_layer_preference M12Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Text -color magenta -is_selectable 0
+set_layer_preference M12EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12EOL -color magenta -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M12Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M12Patch -color magenta -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M13 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13 -color pink -stipple slash
+set_layer_preference M13Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Hi -color white -stipple slash
+set_layer_preference M13Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Cont -color pink -stipple dot4
+set_layer_preference M13Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Track -color pink -stipple cross
+set_layer_preference M13Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Pin -color pink -stipple cross
+set_layer_preference M13ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13ContPin -color pink -stipple dot4
+set_layer_preference M13RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13RB -color pink -stipple brick
+set_layer_preference M13ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13ContRB -color pink -stipple dot8_2
+set_layer_preference M13Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Vio -color white -stipple solid -line_width 2
+set_layer_preference M13ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13ContVio -color white -stipple solid -line_width 2
+set_layer_preference M13Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Text -color pink -is_selectable 0
+set_layer_preference M13EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13EOL -color pink -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M13Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M13Patch -color pink -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M14 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14 -color cyan -stipple slash
+set_layer_preference M14Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Hi -color white -stipple slash
+set_layer_preference M14Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Cont -color cyan -stipple dot4
+set_layer_preference M14Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Track -color cyan -stipple cross
+set_layer_preference M14Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Pin -color cyan -stipple cross
+set_layer_preference M14ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14ContPin -color cyan -stipple dot4
+set_layer_preference M14RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14RB -color cyan -stipple brick
+set_layer_preference M14ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14ContRB -color cyan -stipple dot8_2
+set_layer_preference M14Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Vio -color white -stipple solid -line_width 2
+set_layer_preference M14ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14ContVio -color white -stipple solid -line_width 2
+set_layer_preference M14Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Text -color cyan -is_selectable 0
+set_layer_preference M14EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14EOL -color cyan -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M14Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M14Patch -color cyan -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M15 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15 -color purple -stipple slash
+set_layer_preference M15Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Hi -color white -stipple slash
+set_layer_preference M15Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Cont -color purple -stipple dot4
+set_layer_preference M15Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Track -color purple -stipple cross
+set_layer_preference M15Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Pin -color purple -stipple cross
+set_layer_preference M15ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15ContPin -color purple -stipple dot4
+set_layer_preference M15RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15RB -color purple -stipple brick
+set_layer_preference M15ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15ContRB -color purple -stipple dot8_2
+set_layer_preference M15Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Vio -color white -stipple solid -line_width 2
+set_layer_preference M15ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15ContVio -color white -stipple solid -line_width 2
+set_layer_preference M15Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Text -color purple -is_selectable 0
+set_layer_preference M15EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15EOL -color purple -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M15Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M15Patch -color purple -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M16 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16 -color olive -stipple slash
+set_layer_preference M16Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Hi -color white -stipple slash
+set_layer_preference M16Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Cont -color olive -stipple dot4
+set_layer_preference M16Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Track -color olive -stipple cross
+set_layer_preference M16Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Pin -color olive -stipple cross
+set_layer_preference M16ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16ContPin -color olive -stipple dot4
+set_layer_preference M16RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16RB -color olive -stipple brick
+set_layer_preference M16ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16ContRB -color olive -stipple dot8_2
+set_layer_preference M16Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Vio -color white -stipple solid -line_width 2
+set_layer_preference M16ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16ContVio -color white -stipple solid -line_width 2
+set_layer_preference M16Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Text -color olive -is_selectable 0
+set_layer_preference M16EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16EOL -color olive -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M16Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M16Patch -color olive -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M17 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17 -color chocolate -stipple slash
+set_layer_preference M17Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Hi -color white -stipple slash
+set_layer_preference M17Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Cont -color chocolate -stipple dot4
+set_layer_preference M17Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Track -color chocolate -stipple cross
+set_layer_preference M17Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Pin -color chocolate -stipple cross
+set_layer_preference M17ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17ContPin -color chocolate -stipple dot4
+set_layer_preference M17RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17RB -color chocolate -stipple brick
+set_layer_preference M17ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17ContRB -color chocolate -stipple dot8_2
+set_layer_preference M17Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Vio -color white -stipple solid -line_width 2
+set_layer_preference M17ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17ContVio -color white -stipple solid -line_width 2
+set_layer_preference M17Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Text -color chocolate -is_selectable 0
+set_layer_preference M17EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17EOL -color chocolate -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M17Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M17Patch -color chocolate -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M18 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18 -color deepskyblue -stipple slash
+set_layer_preference M18Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Hi -color white -stipple slash
+set_layer_preference M18Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Cont -color deepskyblue -stipple dot4
+set_layer_preference M18Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Track -color deepskyblue -stipple cross
+set_layer_preference M18Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Pin -color deepskyblue -stipple cross
+set_layer_preference M18ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18ContPin -color deepskyblue -stipple dot4
+set_layer_preference M18RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18RB -color deepskyblue -stipple brick
+set_layer_preference M18ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18ContRB -color deepskyblue -stipple dot8_2
+set_layer_preference M18Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Vio -color white -stipple solid -line_width 2
+set_layer_preference M18ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18ContVio -color white -stipple solid -line_width 2
+set_layer_preference M18Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Text -color deepskyblue -is_selectable 0
+set_layer_preference M18EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18EOL -color deepskyblue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M18Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M18Patch -color deepskyblue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M19 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19 -color maroon -stipple slash
+set_layer_preference M19Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Hi -color white -stipple slash
+set_layer_preference M19Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Cont -color maroon -stipple dot4
+set_layer_preference M19Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Track -color maroon -stipple cross
+set_layer_preference M19Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Pin -color maroon -stipple cross
+set_layer_preference M19ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19ContPin -color maroon -stipple dot4
+set_layer_preference M19RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19RB -color maroon -stipple brick
+set_layer_preference M19ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19ContRB -color maroon -stipple dot8_2
+set_layer_preference M19Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Vio -color white -stipple solid -line_width 2
+set_layer_preference M19ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19ContVio -color white -stipple solid -line_width 2
+set_layer_preference M19Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Text -color maroon -is_selectable 0
+set_layer_preference M19EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19EOL -color maroon -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M19Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M19Patch -color maroon -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M20 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20 -color salmon -stipple slash
+set_layer_preference M20Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Hi -color white -stipple slash
+set_layer_preference M20Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Cont -color salmon -stipple dot4
+set_layer_preference M20Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Track -color salmon -stipple cross
+set_layer_preference M20Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Pin -color salmon -stipple cross
+set_layer_preference M20ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20ContPin -color salmon -stipple dot4
+set_layer_preference M20RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20RB -color salmon -stipple brick
+set_layer_preference M20ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20ContRB -color salmon -stipple dot8_2
+set_layer_preference M20Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Vio -color white -stipple solid -line_width 2
+set_layer_preference M20ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20ContVio -color white -stipple solid -line_width 2
+set_layer_preference M20Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Text -color salmon -is_selectable 0
+set_layer_preference M20EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20EOL -color salmon -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M20Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M20Patch -color salmon -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M21 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21 -color violet -stipple slash
+set_layer_preference M21Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Hi -color white -stipple slash
+set_layer_preference M21Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Cont -color violet -stipple dot4
+set_layer_preference M21Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Track -color violet -stipple cross
+set_layer_preference M21Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Pin -color violet -stipple cross
+set_layer_preference M21ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21ContPin -color violet -stipple dot4
+set_layer_preference M21RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21RB -color violet -stipple brick
+set_layer_preference M21ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21ContRB -color violet -stipple dot8_2
+set_layer_preference M21Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Vio -color white -stipple solid -line_width 2
+set_layer_preference M21ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21ContVio -color white -stipple solid -line_width 2
+set_layer_preference M21Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Text -color violet -is_selectable 0
+set_layer_preference M21EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21EOL -color violet -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M21Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M21Patch -color violet -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M22 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22 -color royalblue -stipple slash
+set_layer_preference M22Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Hi -color white -stipple slash
+set_layer_preference M22Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Cont -color royalblue -stipple dot4
+set_layer_preference M22Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Track -color royalblue -stipple cross
+set_layer_preference M22Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Pin -color royalblue -stipple cross
+set_layer_preference M22ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22ContPin -color royalblue -stipple dot4
+set_layer_preference M22RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22RB -color royalblue -stipple brick
+set_layer_preference M22ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22ContRB -color royalblue -stipple dot8_2
+set_layer_preference M22Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Vio -color white -stipple solid -line_width 2
+set_layer_preference M22ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22ContVio -color white -stipple solid -line_width 2
+set_layer_preference M22Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Text -color royalblue -is_selectable 0
+set_layer_preference M22EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22EOL -color royalblue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M22Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M22Patch -color royalblue -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M23 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23 -color darkgreen -stipple slash
+set_layer_preference M23Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Hi -color white -stipple slash
+set_layer_preference M23Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Cont -color darkgreen -stipple dot4
+set_layer_preference M23Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Track -color darkgreen -stipple cross
+set_layer_preference M23Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Pin -color darkgreen -stipple cross
+set_layer_preference M23ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23ContPin -color darkgreen -stipple dot4
+set_layer_preference M23RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23RB -color darkgreen -stipple brick
+set_layer_preference M23ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23ContRB -color darkgreen -stipple dot8_2
+set_layer_preference M23Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Vio -color white -stipple solid -line_width 2
+set_layer_preference M23ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23ContVio -color white -stipple solid -line_width 2
+set_layer_preference M23Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Text -color darkgreen -is_selectable 0
+set_layer_preference M23EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23EOL -color darkgreen -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M23Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M23Patch -color darkgreen -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M24 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24 -color tomato -stipple slash
+set_layer_preference M24Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Hi -color white -stipple slash
+set_layer_preference M24Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Cont -color tomato -stipple dot4
+set_layer_preference M24Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Track -color tomato -stipple cross
+set_layer_preference M24Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Pin -color tomato -stipple cross
+set_layer_preference M24ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24ContPin -color tomato -stipple dot4
+set_layer_preference M24RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24RB -color tomato -stipple brick
+set_layer_preference M24ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24ContRB -color tomato -stipple dot8_2
+set_layer_preference M24Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Vio -color white -stipple solid -line_width 2
+set_layer_preference M24ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24ContVio -color white -stipple solid -line_width 2
+set_layer_preference M24Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Text -color tomato -is_selectable 0
+set_layer_preference M24EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24EOL -color tomato -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M24Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M24Patch -color tomato -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M25 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25 -color chartreuse -stipple slash
+set_layer_preference M25Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Hi -color white -stipple slash
+set_layer_preference M25Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Cont -color chartreuse -stipple dot4
+set_layer_preference M25Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Track -color chartreuse -stipple cross
+set_layer_preference M25Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Pin -color chartreuse -stipple cross
+set_layer_preference M25ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25ContPin -color chartreuse -stipple dot4
+set_layer_preference M25RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25RB -color chartreuse -stipple brick
+set_layer_preference M25ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25ContRB -color chartreuse -stipple dot8_2
+set_layer_preference M25Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Vio -color white -stipple solid -line_width 2
+set_layer_preference M25ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25ContVio -color white -stipple solid -line_width 2
+set_layer_preference M25Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Text -color chartreuse -is_selectable 0
+set_layer_preference M25EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25EOL -color chartreuse -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M25Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M25Patch -color chartreuse -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M26 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26 -color wheat -stipple slash
+set_layer_preference M26Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Hi -color white -stipple slash
+set_layer_preference M26Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Cont -color wheat -stipple dot4
+set_layer_preference M26Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Track -color wheat -stipple cross
+set_layer_preference M26Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Pin -color wheat -stipple cross
+set_layer_preference M26ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26ContPin -color wheat -stipple dot4
+set_layer_preference M26RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26RB -color wheat -stipple brick
+set_layer_preference M26ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26ContRB -color wheat -stipple dot8_2
+set_layer_preference M26Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Vio -color white -stipple solid -line_width 2
+set_layer_preference M26ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26ContVio -color white -stipple solid -line_width 2
+set_layer_preference M26Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Text -color wheat -is_selectable 0
+set_layer_preference M26EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26EOL -color wheat -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M26Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M26Patch -color wheat -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M27 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27 -color darkred -stipple slash
+set_layer_preference M27Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Hi -color white -stipple slash
+set_layer_preference M27Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Cont -color darkred -stipple dot4
+set_layer_preference M27Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Track -color darkred -stipple cross
+set_layer_preference M27Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Pin -color darkred -stipple cross
+set_layer_preference M27ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27ContPin -color darkred -stipple dot4
+set_layer_preference M27RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27RB -color darkred -stipple brick
+set_layer_preference M27ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27ContRB -color darkred -stipple dot8_2
+set_layer_preference M27Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Vio -color white -stipple solid -line_width 2
+set_layer_preference M27ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27ContVio -color white -stipple solid -line_width 2
+set_layer_preference M27Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Text -color darkred -is_selectable 0
+set_layer_preference M27EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27EOL -color darkred -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M27Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M27Patch -color darkred -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M28 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28 -color plum -stipple slash
+set_layer_preference M28Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Hi -color white -stipple slash
+set_layer_preference M28Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Cont -color plum -stipple dot4
+set_layer_preference M28Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Track -color plum -stipple cross
+set_layer_preference M28Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Pin -color plum -stipple cross
+set_layer_preference M28ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28ContPin -color plum -stipple dot4
+set_layer_preference M28RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28RB -color plum -stipple brick
+set_layer_preference M28ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28ContRB -color plum -stipple dot8_2
+set_layer_preference M28Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Vio -color white -stipple solid -line_width 2
+set_layer_preference M28ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28ContVio -color white -stipple solid -line_width 2
+set_layer_preference M28Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Text -color plum -is_selectable 0
+set_layer_preference M28EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28EOL -color plum -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M28Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M28Patch -color plum -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M29 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29 -color teal -stipple slash
+set_layer_preference M29Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Hi -color white -stipple slash
+set_layer_preference M29Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Cont -color teal -stipple dot4
+set_layer_preference M29Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Track -color teal -stipple cross
+set_layer_preference M29Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Pin -color teal -stipple cross
+set_layer_preference M29ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29ContPin -color teal -stipple dot4
+set_layer_preference M29RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29RB -color teal -stipple brick
+set_layer_preference M29ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29ContRB -color teal -stipple dot8_2
+set_layer_preference M29Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Vio -color white -stipple solid -line_width 2
+set_layer_preference M29ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29ContVio -color white -stipple solid -line_width 2
+set_layer_preference M29Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Text -color teal -is_selectable 0
+set_layer_preference M29EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29EOL -color teal -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M29Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M29Patch -color teal -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M30 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30 -color lime -stipple slash
+set_layer_preference M30Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Hi -color white -stipple slash
+set_layer_preference M30Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Cont -color lime -stipple dot4
+set_layer_preference M30Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Track -color lime -stipple cross
+set_layer_preference M30Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Pin -color lime -stipple cross
+set_layer_preference M30ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30ContPin -color lime -stipple dot4
+set_layer_preference M30RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30RB -color lime -stipple brick
+set_layer_preference M30ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30ContRB -color lime -stipple dot8_2
+set_layer_preference M30Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Vio -color white -stipple solid -line_width 2
+set_layer_preference M30ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30ContVio -color white -stipple solid -line_width 2
+set_layer_preference M30Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Text -color lime -is_selectable 0
+set_layer_preference M30EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30EOL -color lime -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M30Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M30Patch -color lime -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M31 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31 -color navy -stipple slash
+set_layer_preference M31Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Hi -color white -stipple slash
+set_layer_preference M31Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Cont -color navy -stipple dot4
+set_layer_preference M31Track -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Track -color navy -stipple cross
+set_layer_preference M31Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Pin -color navy -stipple cross
+set_layer_preference M31ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31ContPin -color navy -stipple dot4
+set_layer_preference M31RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31RB -color navy -stipple brick
+set_layer_preference M31ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31ContRB -color navy -stipple dot8_2
+set_layer_preference M31Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Vio -color white -stipple solid -line_width 2
+set_layer_preference M31ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31ContVio -color white -stipple solid -line_width 2
+set_layer_preference M31Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Text -color navy -is_selectable 0
+set_layer_preference M31EOL -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31EOL -color navy -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference M31Patch -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference M31Patch -color navy -stipple_data 8 8 {0x01 0x01 0x01 0x01 0x01 0xff 0x01 0x01}
+set_layer_preference MB4 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4 -color #00d000 -stipple backslash
+set_layer_preference MB4Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4Hi -color white -stipple backslash
+set_layer_preference MB4Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4Cont -color #d0d000 -stipple dot4
+set_layer_preference MB4Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4Pin -color #00d000 -stipple cross -is_selectable 0
+set_layer_preference MB4ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4ContPin -color #d0d000 -stipple dot4 -is_selectable 0
+set_layer_preference MB4RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4RB -color #00d000 -stipple brick -is_selectable 0
+set_layer_preference MB4ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4ContRB -color #d0d000 -stipple dot8_1 -is_selectable 0
+set_layer_preference MB4Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4Vio -color white -stipple solid -line_width 2
+set_layer_preference MB4ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4ContVio -color white -stipple solid -line_width 2
+set_layer_preference MB4Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB4Text -color #00d000 -is_selectable 0
+set_layer_preference MB3 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3 -color #d0d000 -stipple slash
+set_layer_preference MB3Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3Hi -color white -stipple slash
+set_layer_preference MB3Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3Cont -color brown -stipple dot4
+set_layer_preference MB3Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3Pin -color #d0d000 -stipple cross -is_selectable 0
+set_layer_preference MB3ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3ContPin -color brown -stipple dot4 -is_selectable 0
+set_layer_preference MB3RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3RB -color #d0d000 -stipple brick -is_selectable 0
+set_layer_preference MB3ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3ContRB -color brown -stipple dot8_2 -is_selectable 0
+set_layer_preference MB3Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3Vio -color white -stipple solid -line_width 2
+set_layer_preference MB3ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3ContVio -color white -stipple solid -line_width 2
+set_layer_preference MB3Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB3Text -color #d0d000 -is_selectable 0
+set_layer_preference MB2 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2 -color brown -stipple backslash
+set_layer_preference MB2Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Hi -color white -stipple backslash
+set_layer_preference MB2Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Cont -color orange -stipple dot4
+set_layer_preference MB2Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Pin -color brown -stipple cross -is_selectable 0
+set_layer_preference MB2ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2ContPin -color orange -stipple dot4 -is_selectable 0
+set_layer_preference MB2RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2RB -color brown -stipple brick -is_selectable 0
+set_layer_preference MB2ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2ContRB -color orange -stipple dot8_1 -is_selectable 0
+set_layer_preference MB2Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Vio -color white -stipple solid -line_width 2
+set_layer_preference MB2ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2ContVio -color white -stipple solid -line_width 2
+set_layer_preference MB2Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Text -color brown -is_selectable 0
+set_layer_preference MB1 -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1 -color orange -stipple slash
+set_layer_preference MB1Hi -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1Hi -color white -stipple slash
+set_layer_preference MB1Cont -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1Cont -color blue -stipple dot4
+set_layer_preference MB1Pin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1Pin -color orange -stipple cross -is_selectable 0
+set_layer_preference MB1ContPin -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1ContPin -color blue -stipple dot4 -is_selectable 0
+set_layer_preference MB1RB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1RB -color orange -stipple brick -is_selectable 0
+set_layer_preference MB1ContRB -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1ContRB -color blue -stipple dot8_2 -is_selectable 0
+set_layer_preference MB1Vio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1Vio -color white -stipple solid -line_width 2
+set_layer_preference MB1ContVio -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB1ContVio -color white -stipple solid -line_width 2
+set_layer_preference MB2Text -is_visible 1 -is_selectable 1 -stipple_data 0 0 {}
+set_layer_preference MB2Text -color orange -is_selectable 0
+set_layer_preference allM0 -is_visible 1 -is_selectable 1
+set_layer_preference allM1 -is_visible 1 -is_selectable 1
+set_layer_preference allM2 -is_visible 1 -is_selectable 1
+set_layer_preference allM3 -is_visible 1 -is_selectable 1
+set_layer_preference allM4 -is_visible 1 -is_selectable 1
+set_layer_preference allM5 -is_visible 1 -is_selectable 1
+set_layer_preference allM6 -is_visible 1 -is_selectable 1
+set_layer_preference allM0Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM1Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM2Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM3Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM4Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM5Cont -is_visible 1 -is_selectable 1
+set_layer_preference allM6Cont -is_visible 1 -is_selectable 1
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinstdCell -is_selectable 1
+set_layer_preference obsstdCell -is_selectable 1
+set_layer_preference obsstdCell -is_visible 0
+set_layer_preference pinstdCell -is_selectable 0
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference term -is_visible 0
+set_layer_preference term -is_visible 1
+set_layer_preference pinstdCell -is_selectable 1
+set_layer_preference pinstdCell -is_selectable 0
+set_layer_preference pinObj -is_visible 1
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+set_layer_preference term -is_visible 0
+gui_ungroup_hinst DTMF_INST
+gui_group_hinst DTMF_INST
+gui_group_hinst {}
+gui_ungroup_hinst DTMF_INST
+zoom_box -1203.199 207.132 -1096.103 89.837
+zoom_box -1195.089 148.826 -1174.591 137.439
+zoom_box -1187.792 142.458 -1186.354 141.573
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+gui_ungroup_hinst DTMF_INST/RAM_256x16_TEST_INST
+gui_group_hinst DTMF_INST
+gui_set_draw_view fplan
+zoom_box -1314.383 344.929 -983.243 -139.425
+zoom_box -1230.166 229.249 -1106.021 83.472
+gui_clear_highlight -select
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_redraw
+zoom_box -1339.250 299.045 -845.902 -91.149
+zoom_box -1201.300 204.338 -1069.467 42.199
+gui_fit
+gui_set_draw_view fplan
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+zoom_box 1666.159 86.803 1684.262 -103.273
+gui_set_tool move
+deselect_all
+flip_or_rotate_obj -rotate R90
+flip_or_rotate_obj -rotate R90
+flip_or_rotate_obj -rotate R90
+gui_set_tool select
+gui_select -point {-267.096 265.230}
+gui_ungroup_hinst
+gui_select -toggle -rect {-833.765 295.054 -167.679 662.893}
+gui_select -point {-818.853 265.230}
+gui_select -toggle -point {-490.781 240.376}
+gui_select -toggle -point {-202.475 647.980}
+gui_select -toggle -point {-137.855 106.164}
+gui_select -toggle -point {-784.058 230.434}
+gui_select -toggle -point {-177.621 638.038}
+gui_select -toggle -point {-391.365 165.814}
+gui_select -toggle -point {-113.001 121.076}
+gui_select -point {-232.300 623.126}
+gui_select -point {-182.592 608.214}
+gui_select -point {-192.534 618.155}
+gui_select -toggle -point {-192.534 618.155}
+gui_select -toggle -point {-192.534 652.951}
+gui_select -point {-192.534 623.126}
+gui_select -toggle -point {-182.592 623.126}
+gui_set_tool move
+gui_set_tool select
+gui_select -toggle -point {-1136.984 121.076}
+gui_select -toggle -point {-1151.896 170.785}
+gui_select -toggle -point {-1156.867 -57.872}
+gui_group_hinst DTMF_INST
+gui_select -toggle -point {-411.248 424.295}
+gui_ungroup_hinst DTMF_INST
+gui_select -toggle -point {-381.423 195.638}
+gui_select -toggle -point {-192.534 613.184}
+gui_select -toggle -point {-98.088 126.047}
+gui_select -toggle -point {-759.203 210.550}
+gui_select -toggle -point {-1141.955 145.930}
+gui_select -toggle -point {2178.534 101.194}
+gui_select -toggle -point {2064.205 56.456}
+gui_select -toggle -point {2272.979 150.901}
+gui_set_tool move
+deselect_all
+gui_set_tool select
+gui_select -toggle -point {-182.592 613.184}
+delete_all_floorplan_objs
+get_io_flow_flag
+set_io_flow_flag 0
+create_floorplan -site tsm3site -core_density_size 0.988291918941 0.701308 100 100 100 100
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+gui_set_tool ruler
+gui_add_ui
+gui_add_ui expMenu -type menu -label NewMenu -in main
+set_layer_preference violation -is_visible 1
+gui_show_markers -all -no_false_marker
+gui_add_ui expCmd -type command -label {New command ...} -command {puts {execute my command}} -in expMenu
+gui_add_ui expToolbar -type toolbar -in main -label {"New} Toolbar\" -newline true
+gui_add_ui expToolbar -type toolbar -in main -label { "New} Toolbar\" -newline true
+gui_delete_ui expMenu
+check_floorplan
+help check_floorplan
+check_timing_library_consistency
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+set_preference percentageOfPan 50
+floorplan_get_snap_rule -for CON -quiet
+floorplan_get_snap_rule -for BLK -quiet
+floorplan_get_snap_rule -for PLK -quiet
+floorplan_get_snap_rule -for IOP -quiet
+floorplan_get_snap_rule -for DIE -quiet
+floorplan_get_snap_rule -for CORE -quiet
+gui_group_hinst DTMF_INST
+gui_ungroup_hinst DTMF_INST
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -236.316 -11.799 -5.8995 215.649
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -591.1255 -11.799 -236.316 338.439
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -996.002 -11.799 -591.1255 387.861
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/DMA_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -1312.5305 -11.799 -996.002 300.6515
+set_obj_floorplan_box Module DTMF_INST/SPI_INST 1073735.924 1073730.0245 1073735.9245 1073730.025
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1693.827 -11.799 -1312.5305 364.585
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2416.7055 -11.799 2716.7055 268.201
+set_obj_floorplan_box Instance DTMF_INST/i_10048 -5.8995 -11.799 -5.8995 -11.799
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST 1468.6455 371.6695 1699.062 599.1175
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST 1113.836 371.6695 1468.6455 721.9075
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST 708.9595 371.6695 1113.836 771.3295
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/DMA_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/ARB_INST 392.431 371.6695 708.9595 684.12
+set_obj_floorplan_box Module DTMF_INST/SPI_INST -1072036.863 -1073358.356 -1072036.8625 -1073358.3555
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST 11.1345 371.6695 392.431 748.0535
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 4121.6665 371.6685 4421.6665 651.6685
+set_obj_floorplan_box Instance DTMF_INST/i_10048 2040.9015 718.9085 2043.5415 723.9485
+zoom_selected
+zoom_selected
+zoom_selected
+gui_redraw
+zoom_out
+zoom_out
+zoom_out
+zoom_out
+zoom_out
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+zoom_in
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+zoom_selected
+zoom_selected
+zoom_selected
+zoom_selected
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+gui_set_draw_view fplan
+gui_redraw
+gui_set_tool ruler
+gui_set_tool flightline
+zoom_selected
+zoom_selected
+gui_fit
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST 85.9175 186.895 316.334 414.343
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -277.228 185.9455 77.852 533.7055
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -673.888 185.9455 -269.308 584.1055
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/DMA_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -990.028 185.9455 -673.228 498.4255
+set_obj_floorplan_box Module DTMF_INST/SPI_INST 1072359.096 1073557.0495 -1073419.5905 -1073543.13
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1371.508 185.9455 -990.028 563.9455
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2738.937 186.8955 3038.937 466.8955
+set_obj_floorplan_box Instance DTMF_INST/i_10048 -260.068 533.7055 -257.428 538.7455
+deselect_all
+deselect_all
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -681.9815 597.691 -326.9015 945.451
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -677.719 597.691 -322.639 945.451
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -681.981 597.691 -326.901 945.451
+gui_set_tool select
+gui_group_hinst DTMF_INST
+gui_ungroup_hinst DTMF_INST
+gui_select -point {280.288 296.302}
+gui_select -point {280.288 296.302}
+gui_select -toggle -point {199.303 313.351}
+gui_select -point {280.288 292.039}
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -255.191 163.706 -24.851 390.506
+gui_set_tool select
+gui_select -point {1899.995 748.114}
+gui_group_hinst DTMF_INST
+gui_select -point {-420.485 428.125}
+gui_select -toggle -point {-420.485 428.125}
+gui_select -point {-438.183 422.226}
+gui_select -toggle -point {-438.183 422.226}
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST 300.991 294.9745 1150.402 1133.441
+set_obj_floorplan_box Module DTMF_INST 300.960 295.120 1150.380 1131.760
+gui_set_tool select
+gui_select -point {724.018 729.000}
+gui_select -toggle -point {724.018 711.301}
+get_io_flow_flag
+set_io_flow_flag 0
+create_floorplan -site tsm3site -core_density_size 044198402 0.702311 100.94 100.44 100.32 100.24
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+set_io_flow_flag 0
+create_floorplan -site tsm3site -core_density_size 1855.3689759 0.001008 101.6 101.0 100.32 100.24
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+gui_redraw
+gui_set_draw_view place
+gui_set_draw_view fplan
+zoom_selected
+gui_fit
+gui_fit
+gui_redraw
+get_io_flow_flag
+set_io_flow_flag 0
+create_floorplan -site tsm3site -die_size 1254.585 1264.36 102.26 101.56 100.32 100.24
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+set_io_flow_flag 0
+create_floorplan -site tsm3site -die_size 1254.66 1264.48 102.3 101.36 100.32 100.24
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+gui_select -point {798.832 682.206}
+gui_select -point {723.210 706.513}
+gui_select -toggle -point {723.210 709.214}
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_tool cut
+puts {}
+set_floorplan_polygon -type Module -name {DTMF_INST} 301.0000 296.0400 301.0000 1132.6800 1150.4200 1132.6800 1150.4200 296.0400 301.0000 296.0400 347.8600 311.1600 688.4200 311.1600 688.4200 638.7600 347.8600 638.7600 347.8600 311.1600
+gui_set_tool move
+gui_set_tool cut
+puts {}
+set_floorplan_polygon -type Module -name {DTMF_INST} 301.0000 296.0400 301.0000 1132.6800 1150.4200 1132.6800 1150.4200 296.0400 301.0000 296.0400 601.9600 769.8000 812.5000 769.8000 812.5000 825.2400 601.9600 825.2400 601.9600 769.8000 347.8600 311.1600 688.4200 311.1600 688.4200 638.7600 347.8600 638.7600 347.8600 311.1600
+gui_set_tool select
+zoom_in
+zoom_in
+gui_select -append -point {1393.118 301.771}
+gui_select -point {1740.091 384.219}
+gui_select -point {786.782 539.296}
+gui_select -point {719.620 720.341}
+gui_select -point {719.620 705.740}
+gui_select -point {722.539 705.740}
+gui_select -toggle -point {722.539 705.740}
+gui_select -rect {842.263 650.259 696.259 603.538}
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST -732.7075 15.713 116.7125 852.353
+set_obj_floorplan_box Module DTMF_INST -884.364 37.5745 -34.944 874.2145
+gui_ungroup_hinst DTMF_INST
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -259.9455 154.196 -29.6055 380.996
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -686.7355 588.181 -331.6555 935.941
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -678.6425 176.4355 -274.0625 574.5955
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/DMA_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -994.7825 176.4355 -677.9825 488.9155
+set_obj_floorplan_box Module DTMF_INST/SPI_INST 1073737.0695 1073732.314 -1073424.345 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1376.2625 176.4355 -994.7825 554.4355
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2734.1805 177.385 3034.1805 457.385
+set_obj_floorplan_box Instance DTMF_INST/i_10048 332.5455 347.01 335.1855 352.05
+gui_set_tool select
+gui_select -point {-492.693 785.103}
+gui_select -point {-478.428 761.328}
+gui_select -toggle -point {-502.202 775.593}
+gui_select -point {-442.142 746.911}
+gui_select -point {-514.286 757.217}
+gui_select -point {-507.415 757.217}
+gui_select -toggle -point {-507.415 757.217}
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST 364.494 553.827 719.574 901.587
+set_layer_preference flightLine -is_visible 0
+gui_set_tool cut
+puts {}
+set_floorplan_polygon -type Module -name {DTMF_INST/TDSP_CORE_INST} 364.3600 553.0800 364.3600 900.8400 719.4400 900.8400 719.4400 689.1600 516.1600 689.1600 516.1600 553.0800 364.3600 553.0800 516.1600 543.0000 516.1600 553.0800 719.4400 553.0800 719.4400 689.1600 726.0400 689.1600 726.0400 543.0000 516.1600 543.0000
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST 367.7955 543.0 729.4755 900.84
+gui_set_tool select
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -642.3445 683.851 -280.6645 1041.691
+gui_group_hinst DTMF_INST
+gui_ungroup_hinst DTMF_INST
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -259.9455 150.761 -29.6055 377.561
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -642.3445 680.416 -280.6645 1038.256
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -678.6425 173.0005 -274.0625 571.1605
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/DMA_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -994.7825 173.0005 -677.9825 485.4805
+set_obj_floorplan_box Module DTMF_INST/SPI_INST -1073741.824 1073738.389 -1073424.345 -1073556.075
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1376.2625 173.0005 -994.7825 551.0005
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2734.18 173.95 3034.18 453.95
+set_obj_floorplan_box Instance DTMF_INST/i_10048 337.3 343.005 339.94 348.045
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -235.898 154.196 -5.558 380.996
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -618.297 683.851 -256.617 1041.691
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -654.595 176.4355 -250.015 574.5955
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/DMA_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -970.735 176.4355 -653.935 488.9155
+set_obj_floorplan_box Module DTMF_INST/SPI_INST -1073717.7765 -1073738.389 -1073400.2975 -1073552.64
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1352.215 176.4355 -970.735 554.4355
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2758.2275 177.385 3058.2275 457.385
+set_obj_floorplan_box Instance DTMF_INST/i_10048 361.3475 344.835 363.9875 349.875
+gui_set_tool select
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/DIGIT_REG_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/TEST_CONTROL_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/RESULTS_CONV_INST -332.089 102.665 -101.749 329.465
+set_obj_floorplan_box Module DTMF_INST/TDSP_DS_CS_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST -714.488 632.32 -352.808 990.16
+set_obj_floorplan_box Module DTMF_INST/TDSP_MUX 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/RAM_256x16_TEST_INST -750.786 124.9045 -346.206 523.0645
+set_obj_floorplan_box Module DTMF_INST/DATA_SAMPLE_MUX_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/ULAW_LIN_CONV_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/DMA_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/ARB_INST -1066.926 124.9045 -750.126 437.3845
+set_obj_floorplan_box Module DTMF_INST/SPI_INST 1073669.6805 1073693.728 -1073496.4885 -1073604.171
+set_obj_floorplan_box Module DTMF_INST/RAM_128x16_TEST_INST -1448.406 124.9045 -1066.926 502.9045
+set_obj_floorplan_box Instance DTMF_INST/PLLCLK_INST 2662.034 125.854 2962.034 405.854
+set_obj_floorplan_box Instance DTMF_INST/i_10048 264.869 294.909 267.509 299.949
+gui_set_tool select
+gui_select -point {-579.558 860.279}
+gui_set_tool move
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST 360.789 525.823 722.469 883.663
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_tool select
+gui_set_tool select
+gui_set_tool cut
+set_obj_floorplan_box Module DTMF_INST/TDSP_CORE_INST 357.6245 527.88 719.3045 885.72
+gui_set_tool select
+gui_select -rect {502.589 678.203 729.326 499.562}
+gui_select -rect {512.896 661.026 708.713 533.917}
+zoom_box 512.896 667.897 715.584 523.610
+gui_select -point {533.254 532.957}
+gui_select -rect {509.061 531.534 722.524 535.803}
+gui_set_tool select
+gui_select -point {440.752 673.842}
+gui_set_tool select
+gui_select -point {523.292 773.459}
+gui_set_tool obstruct
+create_place_blockage -area 445.022 699.458 665.601 816.152
+delete_all_floorplan_objs
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST { -ref_type} core_boundary { -horizontal_edge_seperate} {1 -40 1} { -vertical_edge_seperate} {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {2 40 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_516x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_516x16_0_INST
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -vertical_edge_seperate {0 10 0}
+create_place_blockage -area -626.893 181.480 -513.694 249.399
+create_place_blockage -area -536.334 170.160 -328.803 955.002
+write_floorplan_script -sections relative_fplan EDIT_ROUTE/relativepl
+create_place_blockage -area 1361.628 377.690 1629.531 464.476
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+delete_all_floorplan_objs
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary -horizontal_edge_seperate {1 -40 1} -vertical_edge_seperate {0 -10 0}
+get_io_flow_flag
+get_io_flow_flag
+get_io_flow_flag
+set_io_flow_flag 0
+create_floorplan -site tsm3site -stdcell_density_size 1.01862414954 0.0 100 100 100 100
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+set_io_flow_flag 0
+create_floorplan -site tsm3site -stdcell_density_size 1.00580270793 2.420301 100.94 100.44 100.32 100.24
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+gui_select -point {791.952 423.533}
+gui_select -point {1889.465 681.771}
+delete_all_floorplan_objs
+set_layer_preference cellBlkgObj -is_visible 1
+set_layer_preference obsblock -is_visible 1
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference obsio -is_visible 1
+set_layer_preference obsoverlap -is_visible 1
+set_layer_preference obsother -is_visible 1
+set_layer_preference cellBlkgObj -is_selectable 1
+set_layer_preference obsblock -is_selectable 1
+set_layer_preference obsstdCell -is_selectable 1
+set_layer_preference obsio -is_selectable 1
+set_layer_preference obsoverlap -is_selectable 1
+set_layer_preference obsother -is_selectable 1
+set_layer_preference layoutObj -is_visible 1
+set_layer_preference layoutObj -is_visible 0
+set_layer_preference cellBlkgObj -is_visible 0
+set_layer_preference obsblock -is_visible 0
+set_layer_preference obsstdCell -is_visible 0
+set_layer_preference obsio -is_visible 0
+set_layer_preference obsoverlap -is_visible 0
+set_layer_preference obsother -is_visible 0
+gui_select -point {2816.356 1064.517}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST ref_type core_boundary horizontal_edge_seperate {1 -40 1} verical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate {1 -40 1} verical_edge_seperate {0 -10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate {1 40 1} verical_edge_seperate {0 10 0}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate\{1 -40 1\} verical_edge_seperate\{0 -10 0\}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate\{1 40 1\} verical_edge_seperate\{0 10 0\}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate\{1-40 1\} verical_edge_seperate\{0-10 0\}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate{1401} verical_edge_seperate{0100}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate\{0 1 -40 1\} verical_edge_seperate\{0 0 -10 0\}
+create_relative_floorplan -place DTMF_INST/ARB_INST/ROM_512x16_0_INST -ref_type core_boundary horizontal_edge_seperate\{1 -40 1\} verical_edge_seperate\{0 0 -10 0\}
+gui_set_draw_view fplan
+write_floorplan_script -sections relative_fplan EDIT_ROUTE/partition
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+write_floorplan_script -sections relative_fplan EDIT_ROUTE/EditRoute.dat/gui.pref.tcl
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+write_floorplan_script -sections relative_fplan EDIT_ROUTE/EditRoute.dat/viewDefinition.tcl
+gui_set_draw_view fplan
+undo
+delete_all_floorplan_objs
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_set_draw_view fplan
+gui_select -point {-512.337 653.400}
+gui_set_tool select
+get_io_flow_flag
+gui_fit
+gui_select -point {791.952 423.533}
+gui_select -point {1889.465 681.771}
+delete_all_floorplan_objs
+set_layer_preference cellBlkgObj -is_visible 1
+set_layer_preference obsblock -is_visible 1
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference obsio -is_visible 1
+set_layer_preference obsoverlap -is_visible 1
+set_layer_preference obsother -is_visible 1
+set_layer_preference cellBlkgObj -is_selectable 1
+set_layer_preference obsblock -is_selectable 1
+set_layer_preference obsstdCell -is_selectable 1
+set_layer_preference obsio -is_selectable 1
+set_layer_preference obsoverlap -is_selectable 1
+set_layer_preference obsother -is_selectable 1
+set_layer_preference layoutObj -is_visible 1
+set_layer_preference layoutObj -is_visible 0
+set_layer_preference cellBlkgObj -is_visible 0
+set_layer_preference obsblock -is_visible 0
+set_layer_preference obsstdCell -is_visible 0
+set_layer_preference obsio -is_visible 0
+set_layer_preference obsoverlap -is_visible 0
+set_layer_preference obsother -is_visible 0
+gui_select -point {2816.356 1064.517}

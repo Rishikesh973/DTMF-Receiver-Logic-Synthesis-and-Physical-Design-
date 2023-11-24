@@ -1,0 +1,15 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.22-s017_1, built Sun Apr 01 2018
+Options: -lic_startup Virtuoso_Digital_Implem 
+Date:    Thu Nov 23 09:48:19 2023
+Host:    cad8 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (2cores*4cpus*1physical cpu*Intel(R) Core(TM) i3-3240 CPU @ 3.40GHz 3072KB) (16151820KB)
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+Checking out license: Virtuoso_Digital_Implem
+License 'Virtuoso_Digital_Implem' (main version: 17.1, alternate version: 17.1) checkout failed.
+Cannot obtain 'Virtuoso_Digital_Implem' license.
+Abnormal exit.

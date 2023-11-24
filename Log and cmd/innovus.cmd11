@@ -1,0 +1,409 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Nov 23 15:17:14 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_db init_netlist_files DTMF_CHIP.v.gz
+set_db init_oa_ref_libs {techLib cellLib}
+set_db init_oa_abstract_views a
+set_db init_oa_abstract_views ab
+set_db init_oa_abstract_views abs
+set_db init_oa_abstract_views abst
+set_db init_oa_abstract_views abstr
+set_db init_oa_abstract_views abstra
+set_db init_oa_abstract_views abstrac
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views l
+set_db init_oa_layout_views la
+set_db init_oa_layout_views lay
+set_db init_oa_layout_views layo
+set_db init_oa_layout_views layou
+set_db init_oa_layout_views layout
+set_db init_power_nets V
+set_db init_power_nets VD
+set_db init_power_nets VDD
+set_db init_ground_nets V
+set_db init_ground_nets VD
+set_db init_ground_nets VDD
+set_db init_mmmc_files dtmf.view
+set_db init_oa_abstract_views abstract
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_power_nets VDD
+set_db init_ground_nets VDD
+set_db init_ground_nets VDD
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz
+set_current_design {}
+read_floorplan dtmf.IO.def
+init_design
+eval_legacy { setLibraryUnit -time none -internal }
+set_db floorplan_is_max_io_height 1
+set_io_flow_flag 0
+create_floorplan -core_density_size 1.0 0.7 0 0 0 0 -flip f
+set_all_ios_to_fixed -pin_only
+report_resource
+report_resource -start {Constraint file reading stats}
+current_design DTMF_CHIP
+report_resource -end {Constraint file reading stats}
+report_resource
+gui_set_draw_view fplan
+read_floorplan dtmf_fp.fp
+gui_set_draw_view fplan
+gui_fit
+read_floorplan dtmf_blocks.fp
+gui_set_draw_view fplan
+gui_fit
+gui_group_hinst DTMF_INST
+gui_select -point {-437.421 470.226}
+gui_select -point {-443.880 463.766}
+gui_select -toggle -point {-443.880 463.766}
+read_floorplan /home/kamalesh/Desktop/VDI/my
+gui_set_draw_view fplan
+gui_fit
+read_floorplan ../../../DTMF_CHIP.fp.spr
+gui_set_draw_view fplan
+gui_fit
+read_floorplan ../../../DTMF_CHIP.fp
+gui_set_draw_view fplan
+gui_fit
+read_floorplan dtmf_fp.fp
+gui_set_draw_view fplan
+gui_fit
+read_floorplan dtmf_fp.fp
+gui_set_draw_view fplan
+gui_fit
+read_floorplan dtmf.fp
+gui_set_draw_view fplan
+gui_fit
+read_floorplan dtmf_blocks.fp
+gui_set_draw_view fplan
+gui_fit
+create_place_halo -halo_deltas {10 10 10 10} -inst DTMF_INST/PLLCLK_INST
+gui_select -point {1949.380 366.873}
+gui_redraw
+create_place_halo -halo_deltas {10 10 10 10} -inst DTMF_INST/PLLCLK_INST
+gui_select -point {312.021 433.173}
+gui_redraw
+gui_group_hinst DTMF_INST
+gui_select -point {-454.492 451.005}
+gui_select -toggle -point {-454.492 451.005}
+gui_set_tool layerBlk
+create_route_blockage -area 335.565 336.622 344.543 643.368
+gui_set_tool layerBlk
+gui_redraw
+gui_set_tool select
+gui_redraw
+gui_select -point {283.942 546.855}
+gui_select -point {340.055 641.871}
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+create_route_blockage -area 264.490 593.989 298.158 607.456
+delete_floorplan_obj -obj_type LayerShape (528980,1187980,596320,1214910)
+delete_floorplan_obj -obj_type LayerShape (671130,673240,689090,1286740)
+gui_set_tool obstruct
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+create_route_blockage -area 334.817 344.103 343.795 641.123
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool select
+gui_set_tool layerBlk
+create_route_blockage -area 335.565 412.186 339.307 643.368
+delete_floorplan_obj -obj_type LayerShape (671130,824370,678610,1286740)
+delete_floorplan_obj -obj_type LayerShape (669630,688210,687590,1282250)
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+gui_set_tool layerBlk
+create_route_blockage -area 329.238 1145.944 361.275 1186.411
+create_route_blockage -area 351.158 1154.375 357.903 1172.922
+delete_floorplan_obj -obj_type LayerShape (658480,2291890,722550,2372820)
+delete_floorplan_obj -obj_type LayerShape (702320,2308750,715810,2345840)
+create_route_blockage -area 461.028 380.654 496.559 412.956
+delete_floorplan_obj -obj_type LayerShape (922060,761310,993120,825910)
+gui_set_tool select
+gui_select -point {486.868 454.947}
+gui_select -toggle -point {-456.339 461.408}
+gui_select -toggle -point {-449.879 464.638}
+gui_select -toggle -point {354.432 464.638}
+gui_select -toggle -point {664.528 493.709}
+gui_select -toggle -point {406.115 519.551}
+gui_select -point {293.059 606.765}
+gui_select -toggle -point {293.059 606.765}
+gui_select -toggle -point {238.146 726.282}
+gui_select -toggle -point {347.971 474.329}
+gui_select -toggle -point {357.662 380.654}
+set_layer_preference layerBlk -is_visible 1
+set_layer_preference layerBlk -is_selectable 1
+set_layer_preference allcust -is_visible 0 -is_selectable 0
+set_layer_preference flightLine -is_visible 0
+gui_select -point {309.209 561.543}
+gui_redraw
+gui_redraw
+gui_redraw
+gui_redraw
+gui_redraw
+gui_redraw
+gui_set_tool layerBlk
+gui_set_tool select
+gui_redraw
+gui_select -point {-608.157 464.638}
+write_floorplan DTMF_CHIP.fp
+gui_select -rect {354.432 1159.123 473.948 1013.766}
+gui_set_tool obstruct
+create_place_blockage -area 360.892 981.464 483.639 1136.512
+gui_set_tool select
+gui_select -point {419.035 1033.147}
+set_db place_blockage:0x7f5c535d8020 .density 25
+set_db place_blockage:0x7f5c535d8020 .density 25
+set_db place_blockage:0x7f5c535d8020 .type partial
+set_db place_blockage:0x7f5c535d8020 .type partial
+gui_redraw
+gui_redraw
+write_floorplan DTMF_CHIP.fp
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db generate_special_via_symmetrical_via_only true
+set_db generate_special_via_parameterized_via_only true
+set_db generate_special_via_symmetrical_via_only true
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+gui_select -point {519.170 496.940}
+gui_select -point {574.083 584.154}
+gui_select -point {541.782 535.702}
+gui_select -point {338.281 487.250}
+gui_select -rect {416.195 480.708 387.709 471.519}
+gui_select -point {427.245 515.835}
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+gui_select -point {432.978 480.004}
+gui_select -point {434.411 492.903}
+gui_select -point {443.011 527.301}
+gui_select -point {443.011 527.301}
+gui_set_tool select
+gui_select -point {469.062 510.317}
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type block_rings -around selected -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type block_rings -around selected -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_stripes_ignore_block_check 0
+set_db add_stripes_break_at none
+set_db add_stripes_route_over_rows_only 0
+set_db add_stripes_rows_without_stripes_only 0
+set_db add_stripes_extend_to_closest_target none
+set_db add_stripes_stop_at_last_wire_for_area 0
+set_db add_stripes_partial_set_through_domain 0
+set_db add_stripes_ignore_non_default_domains 0
+set_db add_stripes_trim_antenna_back_to_shape none
+set_db add_stripes_spacing_type edge_to_edge
+set_db add_stripes_spacing_from_block 0
+set_db add_stripes_stripe_min_length 0
+set_db add_stripes_stacked_via_top_layer Metal6
+set_db add_stripes_stacked_via_bottom_layer Metal1
+set_db add_stripes_via_using_exact_crossover_size 0
+set_db add_stripes_split_vias 0
+set_db add_stripes_orthogonal_only 1
+set_db add_stripes_allow_jog {padcore_ring block_ring}
+eval_legacy { addStripe -nets {VDD VSS} -layer Metal6 -direction vertical -width 8 -spacing 1 -set_to_set_distance 100 -start_from left -start_offset 100 -stop_offset 100 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal6 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal6 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape } }
+gui_select -point {436.618 1039.306}
+delete_floorplan_obj -obj_type LayerShape (720720,1961120,967560,2273600)
+gui_redraw
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+gui_redraw
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_rings_target default
+set_db add_rings_extend_over_row 0
+set_db add_rings_ignore_rows 0
+set_db add_rings_avoid_short 0
+set_db add_rings_skip_shared_inner_ring none
+set_db add_rings_stacked_via_top_layer Metal6
+set_db add_rings_stacked_via_bottom_layer Metal1
+set_db add_rings_via_using_exact_crossover_size 1
+set_db add_rings_orthogonal_only 1
+set_db add_rings_skip_via_on_pin standardcell
+set_db add_rings_skip_via_on_wire_shape noshape
+add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top Metal5 bottom Metal5 left Metal6 right Metal6} -width {top 8 bottom 8 left 8 right 8} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -extend_corners {tl rb } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid none
+set_db add_stripes_ignore_block_check 0
+set_db add_stripes_break_at none
+set_db add_stripes_route_over_rows_only 0
+set_db add_stripes_rows_without_stripes_only 0
+set_db add_stripes_extend_to_closest_target none
+set_db add_stripes_stop_at_last_wire_for_area 0
+set_db add_stripes_partial_set_through_domain 0
+set_db add_stripes_ignore_non_default_domains 0
+set_db add_stripes_trim_antenna_back_to_shape none
+set_db add_stripes_spacing_type edge_to_edge
+set_db add_stripes_spacing_from_block 0
+set_db add_stripes_stripe_min_length 0
+set_db add_stripes_stacked_via_top_layer Metal6
+set_db add_stripes_stacked_via_bottom_layer Metal1
+set_db add_stripes_via_using_exact_crossover_size 0
+set_db add_stripes_split_vias 0
+set_db add_stripes_orthogonal_only 1
+set_db add_stripes_allow_jog {padcore_ring block_ring}
+eval_legacy { addStripe -nets {VDD VSS} -layer Metal6 -direction vertical -width 8 -spacing 1 -set_to_set_distance 100 -start_from left -start_offset 100 -stop_offset 100 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal6 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal6 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape } }
+set_db add_stripes_ignore_block_check 0
+set_db add_stripes_break_at none
+set_db add_stripes_route_over_rows_only 0
+set_db add_stripes_rows_without_stripes_only 0
+set_db add_stripes_extend_to_closest_target none
+set_db add_stripes_stop_at_last_wire_for_area 0
+set_db add_stripes_partial_set_through_domain 0
+set_db add_stripes_ignore_non_default_domains 0
+set_db add_stripes_trim_antenna_back_to_shape none
+set_db add_stripes_spacing_type edge_to_edge
+set_db add_stripes_spacing_from_block 0
+set_db add_stripes_stripe_min_length 0
+set_db add_stripes_stacked_via_top_layer Metal6
+set_db add_stripes_stacked_via_bottom_layer Metal1
+set_db add_stripes_via_using_exact_crossover_size 0
+set_db add_stripes_split_vias 0
+set_db add_stripes_orthogonal_only 1
+set_db add_stripes_allow_jog {padcore_ring block_ring}
+eval_legacy { addStripe -nets {VDD VSS} -layer Metal6 -direction vertical -width 8 -spacing 1 -set_to_set_distance 100 -start_from left -start_offset 100 -stop_offset 100 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal6 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal6 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape } }
+set_db inst:DTMF_CHIP/DTMF_INST/DIGIT_REG_INST/digit_out_reg_3 .location {700.0 700.0}
+set_db inst:DTMF_CHIP/DTMF_INST/DIGIT_REG_INST/digit_out_reg_3 .location {700.0 700.0}
+gui_redraw
+gui_set_draw_view place
+gui_select -point {714.034 697.287}
+gui_select -point {706.433 697.287}
+gui_select -toggle -point {706.433 697.287}
+gui_select -toggle -point {706.433 701.087}
+gui_select -point {-262.620 697.287}
+gui_set_draw_view fplan
+gui_set_draw_view place
+edit_split_routes
+write_floorplan ../../../pow.fp
+connect_global_net VDD -type pg_pin -pin VDD -inst_base_name *
+connect_global_net VSS -type pg_pin -pin VSS -inst_base_name *
+gui_select -point {-383.334 58.834}
+set_db route_special_via_connect_to_shape noshape
+route_special -connect {core_pin} -layer_change_range { Metal1(1) Metal6(6) } -block_pin_target {nearest_target} -core_pin_target {first_after_row_end} -allow_jogging 1 -crossover_via_layer_range { Metal1(1) Metal6(6) } -nets { VDD VSS } -allow_layer_change 1 -target_via_layer_range { Metal1(1) Metal6(6) }
+set_db route_special_via_connect_to_shape noshape
+route_special -connect {core_pin} -layer_change_range { Metal1(1) Metal6(6) } -block_pin_target {nearest_target} -core_pin_target {first_after_row_end} -allow_jogging 1 -crossover_via_layer_range { Metal1(1) Metal6(6) } -nets { VDD VSS } -allow_layer_change 1 -target_via_layer_range { Metal1(1) Metal6(6) }
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+write_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP floorplam}
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+gui_set_draw_view fplan
+gui_select -point {665.928 491.521}
+gui_select -point {811.166 466.495}

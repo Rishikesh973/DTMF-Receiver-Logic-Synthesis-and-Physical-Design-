@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Name     : Shielded net name
+Length   : Shielded net length
+Shield   : Total length of shielding wire
+ratio    : Average shielding ratio
+
+-------------------------------------------------------------------------------
+Name          Length    Shield    Ratio
+-------------------------------------------------------------------------------
+DTMF_INST/TDSP_CORE_INST/read_data:
+               292.4     580.6    0.993
+                                         Metal2:      210.7      419.8  0.996
+                                         Metal3:       81.7      160.8  0.984
+
+average:       292.4     580.6    0.993
+
+

@@ -1,0 +1,26 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jan 24 15:32:17 2019                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v18.10-p002_1 (64bit) 05/29/2018 19:19 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 18.10-p002_1 NR180522-1057/18_10-UB (database version 2.30, 418.7.1) {superthreading v1.46}
+#@(#)CDS: AAE 18.10-p004 (64bit) 05/29/2018 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 18.10-p003_1 () May 15 2018 10:23:07 ( )
+#@(#)CDS: SYNTECH 18.10-a012_1 () Apr 19 2018 01:27:21 ( )
+#@(#)CDS: CPE v18.10-p005
+#@(#)CDS: IQRC/TQRC 18.1.1-s118 (64bit) Fri Mar 23 17:23:45 PDT 2018 (Linux 2.6.18-194.el5)
+
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz
+init_design
+eval_legacy { set_analysis_view -sync_timing }
+read_def  DTMF_CHIP_io.def
+

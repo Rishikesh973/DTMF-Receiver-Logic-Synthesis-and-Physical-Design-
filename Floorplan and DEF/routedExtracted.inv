@@ -1,0 +1,1 @@
+restoreDesign [file dirname [file normalize [info script]]]/routedExtracted.inv.dat DTMF_CHIP

@@ -1,0 +1,97 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Nov 24 11:42:08 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+#@(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+#@(#)CDS: CPE v17.12-s076
+#@(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_db init_oa_abstract_views abstract
+set_db init_oa_layout_views layout
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+read_mmmc dtmf.view
+read_physical -oa_ref_libs {techLib cellLib}
+read_netlist DTMF_CHIP.v.gz
+init_design
+eval_legacy { set_analysis_view -sync_timing }
+read_def DTMF_CHIP_io.def
+gui_select -point {0.045 0.005}
+gui_fit
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+read_floorplan dtmf.fp
+gui_set_draw_view fplan
+gui_fit
+gui_set_draw_view place
+gui_set_draw_view ameba
+gui_set_draw_view fplan
+gui_set_draw_view place
+gui_set_draw_view fplan
+gui_select -point {2001.057 1100.031}
+set_db oa_allow_bit_connection true
+gui_select -point {2049.503 757.675}
+read_def scan_input.def
+place_opt_design
+gui_select -point {1955.840 1161.396}
+gui_set_draw_view place
+gui_select -point {1842.798 928.852}
+gui_set_draw_view fplan
+gui_set_draw_view ameba
+gui_set_draw_view place
+set_layer_preference net -is_visible 0
+set_layer_preference power -is_visible 0
+set_layer_preference pgPower -is_visible 0
+set_layer_preference pgGround -is_visible 0
+set_layer_preference clock -is_visible 0
+route_early_global -bottom_routing_layer 1 -top_routing_layer 3 -honor_partition_pin_guide
+set_db route_early_global_bottom_routing_layer 1
+set_db route_early_global_top_routing_layer 3
+set_db route_early_global_honor_partition_pin_guide 1
+set_db route_early_global_honor_partition_pin_guide 1
+reset_db route_early_global_honor_partition_pin_guide
+set_db route_early_global_top_routing_layer 127
+reset_db route_early_global_top_routing_layer
+set_db route_early_global_bottom_routing_layer 2
+reset_db route_early_global_bottom_routing_layer
+gui_select -point {2128.974 982.355}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP earlyGRoute}
+read_db -oa_lib_cell_view {FEOADesignlib DTMF_CHIP earlyGRoute}
+gui_set_draw_view place
+set_layer_preference net -is_visible 1
+set_layer_preference power -is_visible 1
+set_layer_preference pgPower -is_visible 1
+set_layer_preference pgGround -is_visible 1
+set_layer_preference clock -is_visible 1
+reset_parasitics
+extract_rc
+write_sdf dtmf.sdf -ideal_clock_network
+gui_select -point {-577.552 121.208}
+gui_select -point {-302.197 34.868}
+eval_legacy { redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null }
+read_timing_debug_report -name default_report top.mtarpt
+deselect_all
+time_design -pre_cts
+time_design -pre_cts -hold
+write_db -oa_lib_cell_view {FEOADesign DTMF_CHIP preCTSopt}
+set_db cts_buffer_cells { CLKBUFX1 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX8 CLKBUFXL }
+set_db cts_inverter_cells { CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX8 CLKINVXL }
+create_clock_tree_spec
+ccopt_design
+gui_select -point {1641.616 513.237}
+gui_open_ctd -id ctd_window
+gui_select -point {473.608 937.666}
+gui_select -point {497.567 941.273}
+gui_select -point {-47.151 535.303}
+gui_fit
+time_design -post_cts
+time_design -post_cts -hold
+opt_design -post_cts -hold

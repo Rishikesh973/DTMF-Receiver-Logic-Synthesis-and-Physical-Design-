@@ -1,0 +1,73 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.22-s017_1, built Sun Apr 01 2018
+Options: -liv_startup Virtuoso_Digital_Impem 
+Date:    Thu Nov 23 09:45:52 2023
+Host:    cad8 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (2cores*4cpus*1physical cpu*Intel(R) Core(TM) i3-3240 CPU @ 3.40GHz 3072KB) (16151820KB)
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (11 seconds elapsed).
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+
+Usage: genus [-abort_on_error] [-batch] [-del_scale 10] 
+          [-disable_user_startup] [-execute <string>]+ [-files <string>]+ 
+          [-help] [-legacy_gui] [-legacy_ui] [-lic_stack <integer>] 
+          [-lic_startup <string>] [-lic_startup_options <string>]+ [-log 
+          <string>] [-no_gui] [-overwrite] [-version] [-wait <integer>] 
+
+    [-abort_on_error]:
+        exit on script error
+    [-batch]:
+        exit after processing files
+    [-del_scale 10]:
+        for low frequency designs (below 5kHz)
+    [-disable_user_startup]:
+        only read master init file
+    [-execute <string>]+:
+        command string to execute before '-files' processing
+    [-files <string>]+:
+        execute command file
+    [-help]:
+        print this message
+    [-legacy_gui]:
+        start tool with legacy GUI
+    [-legacy_ui]:
+        start tool with legacy UI
+    [-lic_stack <integer>]:
+        specify number of licenses for VDI
+    [-lic_startup <string>]:
+        specifies one of the following licenses
+            Genus_Synthesis
+            Virtuoso_Digital_Implem
+            Virtuoso_Digital_Implem_XL
+    [-lic_startup_options <string>]+:
+        checkout an option license at startup
+            Genus_Low_Power_Opt
+            Genus_Physical_Opt
+            Vdixl_Capacity_Opt
+    [-log <string>]:
+        prefix for the .log and .cmd files. If two args are given like
+        -log "a b" then the two names are used without any extenstion
+        added. If the .log file already exists, an integer is appended
+        to all the names to make the files unique.
+    [-no_gui]:
+        start with GUI disabled
+    [-overwrite]:
+        overwrite default logfiles
+    [-version]:
+        return program version information
+    [-wait <integer>]:
+        queue wait timeout in minutes
+
+Abnormal exit.Abnormal exit.

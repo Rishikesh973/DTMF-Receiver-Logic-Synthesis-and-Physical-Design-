@@ -1,0 +1,46 @@
+create_library_set -name dtmf_libs_min\
+   -timing\
+    [list ../lib/pllclk_fast.lib\
+    ../lib/ram_128x16A_fast_syn.lib\
+    ../lib/rom_512x16A_fast_syn.lib\
+    ../lib/ram_256x16A_fast_syn.lib\
+    ../lib/fast.lib\
+    ../lib/tpz973gbc-lite_fast.lib]\
+   -si\
+    [list ../CDB/fast.cdb]
+create_library_set -name dtmf_libs_max\
+   -timing\
+    [list ../lib/pllclk_slow.lib\
+    ../lib/ram_128x16A_slow_syn.lib\
+    ../lib/ram_256x16A_slow_syn.lib\
+    ../lib/rom_512x16A_slow_syn.lib\
+    ../lib/slow.lib\
+    ../lib/tpz973gwc-lite_slow.lib]\
+   -si\
+    [list ../CDB/slow.cdb]
+create_timing_condition -name default_mapping_tc_2\
+   -library_sets [list dtmf_libs_max]
+create_timing_condition -name default_mapping_tc_1\
+   -library_sets [list dtmf_libs_min]
+create_rc_corner -name dtmf_rc_corner\
+   -cap_table ../captable/t018s6mlv.capTbl\
+   -pre_route_res 1\
+   -post_route_res 1\
+   -pre_route_cap 1\
+   -post_route_cap 1\
+   -post_route_cross_cap 1\
+   -pre_route_clock_res 0\
+   -pre_route_clock_cap 0\
+   -qrc_tech ../QRC/t018s6mm.tch
+create_delay_corner -name dtmf_corner_min\
+   -timing_condition {default_mapping_tc_1}\
+   -rc_corner dtmf_rc_corner
+create_delay_corner -name dtmf_corner_max\
+   -timing_condition {default_mapping_tc_2}\
+   -rc_corner dtmf_rc_corner
+create_constraint_mode -name common\
+   -sdc_files\
+    [list dtmf.sdc]
+create_analysis_view -name dtmf_view_hold -constraint_mode common -delay_corner dtmf_corner_min
+create_analysis_view -name dtmf_view_setup -constraint_mode common -delay_corner dtmf_corner_max
+set_analysis_view -setup [list dtmf_view_setup] -hold [list dtmf_view_hold]
