@@ -138,7 +138,7 @@ Changes to the netlist and constraints are not written out unless explicitly spe
  ~0. 235553868 mm2
 total run time and memory usage to this point? 
 ~288.99 secs, ~1510.26 MB
-
+---
 # 2. Physical Design
  ## 2. Imporing The Design
 Starting the Software 
@@ -216,7 +216,7 @@ delete_relative_floorplan DTMF_INST/ARB_INST/ROM_512x16_0_INST
  ![Screenshot from 2023-11-23 11-26-35](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/a432161b-e82c-4e42-bf47-a5874bc5ed0f)
  Save the floorplan with a name dtmf_fp.fp
 ![Screenshot from 2023-11-23 15-01-40](https://github.com/Rishikesh973/DTMF-Receiver-Logic-Synthesis-and-Physical-Design-/assets/145873226/cb632c86-de6a-488c-98c6-e29a3ef5b062)
-
+---
 ## 2.3.Power Planning
 1.Start the Innovus platform by entering this string: 
 innovus -vdi -stylus
@@ -318,7 +318,7 @@ wires. You also route shielded nets and change the width of a signal wire.
 ## 2.8. Final Sign-off and Generating GDS file
 
 After all optimization and analysis check DRC, Timing and Signal Integrity if present clear it and in >file>save>GDS and give a name
-the GDS file can sent to the foundry to Fabricate
+the GDS and the file can sent to the foundry to Fabricate.
 ---
 
 
