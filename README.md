@@ -29,11 +29,11 @@
 # 1. Logic Synthesis
  work/
 
-//This where you run your labs
+
 Starting Genus
-1. Change to the work directory by entering this command: cd genus labs/work
+1. Change to the work directory
 2. Start the software by entering this command:
-- genus -lic startup Virtuoso Digital Implem
+- genus
 - You can type commands interactively at The command shell that starts Genus" is dedicated to the Genus shell. You must view files in a separate terminal window and not in the Genus shell.
 the genus: shell prompt.
 
@@ -82,7 +82,7 @@ Also, the elaboration must finish with the "Done elaborating...." message.
 
 ### Reading SDC Constraints
 1. Read the constraint file.
-   read sdc../constraints/constraints.ado
+   read sdc../constraints/
 The SDC file has some errors. The log file reports the errors and the reasons.
 Are there any errors and failed commands?
 
@@ -146,7 +146,6 @@ Starting the Software
    cd VDI/FPR/work 
 2. Start the Virtuoso® Digital Implementation (VDI) system by entering: 
     innovus -vdi -stylus
-Note: Do not use the window where you started the software for any windowing or 
 UNIX operations, except to communicate with the tool. 
 Importing a Design
 1. To import a gate-level netlist, timing constraints, and libraries, choose File – Import
